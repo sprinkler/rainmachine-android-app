@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_between_items">5dp</dimen>
+    <dimen name="height_card_with_image">214dp</dimen>
+    <dimen name="height_card_without_image">64dp</dimen>
+    <dimen name="height_card_above_bar">150dp</dimen>
+    <dimen name="text_counter">64sp</dimen>
+</resources>

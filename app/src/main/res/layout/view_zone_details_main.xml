@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainmachine.presentation.screens.zonedetails.ZoneDetailsMainView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:showIn="@layout/activity_zone_details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_large">
+
+        <FrameLayout
+            android:id="@+id/view_zone_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zone_image_height"
+            android:background="@color/transparent_blue">
+
+            <ImageView
+                android:id="@+id/img_zone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_zone_details_no_image" />
+
+            <ImageView
+                android:id="@+id/img_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:paddingBottom="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:src="@drawable/ic_camera_alt" />
+
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:paddingBottom="@dimen/spacing_large"
+                android:paddingLeft="@dimen/spacing_large"
+                android:src="@drawable/ic_delete_forever_white_24dp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/view_master_valve"
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/zone_details_master_valve"
+                    android:textSize="@dimen/text_larger" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/toggle_master_valve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/spacing_medium" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/view_program_after_before"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/spacing_large">
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/view_before"
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/zone_details_before_program_starts"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:id="@+id/tv_before_program_starts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/view_after"
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/zone_details_after_program_ends"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:id="@+id/tv_after_program_starts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_card"
+                android:paddingRight="@dimen/padding_card"
+                android:text="@string/zone_details_master_valve_info"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="16dp"
+                        android:text="@string/zone_details_name"
+                        android:textSize="@dimen/text_larger" />
+
+                    <EditText
+                        android:id="@+id/input_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textShortMessage" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/zone_details_zone_active"
+                        android:textSize="@dimen/text_larger" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/toggle_enabled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/spacing_medium" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/zone_details_show_image"
+                        android:textSize="@dimen/text_larger" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/toggle_show_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/spacing_medium" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/view_weather_settings"
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableRight="@drawable/ic_action_next_item"
+                    android:gravity="center_vertical"
+                    android:text="@string/zone_details_weather_settings"
+                    android:textSize="@dimen/text_larger" />
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/view_advanced_zone_settings"
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableRight="@drawable/ic_action_next_item"
+                    android:gravity="center_vertical"
+                    android:text="@string/zone_details_advanced"
+                    android:textSize="@dimen/text_larger" />
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+        </LinearLayout>
+    </LinearLayout>
+</com.rainmachine.presentation.screens.zonedetails.ZoneDetailsMainView>

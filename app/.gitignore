@@ -1,0 +1,6 @@
+/build
+#config.properties
+#crashlytics.properties
+#keystore.properties
+#src/release/res/values/config.xml
+#src/debug/res/values/config.xml

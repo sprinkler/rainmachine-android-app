@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_vitals"
+        android:paddingRight="@dimen/padding_vitals"
+        android:textColor="@color/text_white" />
+
+    <com.rainmachine.presentation.widgets.ThinDividerView
+        android:id="@+id/divider_title"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:paddingLeft="@dimen/padding_vitals"
+        android:paddingRight="@dimen/padding_vitals" />
+
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/stats_regenerating_graph"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_larger" />
+</LinearLayout>

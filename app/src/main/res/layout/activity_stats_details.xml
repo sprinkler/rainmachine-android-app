@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.statsdetails.StatsDetailsActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.statsdetails.StatsDetailsView
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/SectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Daily water need" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:listSelector="@color/transparent"
+            android:scrollbarStyle="outsideOverlay" />
+    </com.rainmachine.presentation.screens.statsdetails.StatsDetailsView>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <dimen name="height_weather_icon">48dp</dimen>
+
+    <!-- Other -->
+    <dimen name="padding_divider_ab">12dp</dimen>
+    <dimen name="padding_drawable_ab">8dp</dimen>
+    <dimen name="width_up_down">100dp</dimen>
+    <dimen name="size_drawer">300dp</dimen>
+    <dimen name="size_drawer_item">64dp</dimen>
+    <dimen name="padding_seek_bar_lateral">24dp</dimen>
+    <dimen name="padding_vitals">6dp</dimen>
+    <dimen name="padding_map_stations">25dp</dimen>
+    <dimen name="wifi_icon_inset">16dp</dimen>
+    <dimen name="padding_card">8dp</dimen>
+    <dimen name="text_summer_time">30sp</dimen>
+</resources>

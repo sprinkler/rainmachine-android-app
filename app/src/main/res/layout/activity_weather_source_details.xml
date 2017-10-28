@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.weathersourcedetails.WeatherSourceDetailsView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_padding"
+                android:paddingLeft="@dimen/activity_horizontal_padding"
+                android:paddingRight="@dimen/activity_horizontal_padding"
+                android:paddingTop="@dimen/activity_vertical_padding">
+
+                <android.support.v7.widget.CardView
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/data_source"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_larger"
+                            tools:text="NOAA" />
+
+                        <TextView
+                            android:id="@+id/cover_area"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix"
+                            tools:text="Cover area: US only" />
+
+                        <TextView
+                            android:id="@+id/last_run"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix"
+                            tools:text="Last run: 2015-02-01 12:45" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/spacing_medium"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix"
+                            tools:text="National Oceanic and Atmospheric Association. This is the agency of the United States federal government responsible for monitoring our climate and weather. Tried and true, enabled by default." />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:paddingLeft="@dimen/spacing_medium"
+                    android:paddingRight="@dimen/spacing_medium"
+                    android:text="@string/weather_source_details_status"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/text_large" />
+
+                <android.support.v7.widget.CardView
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/toggle_enabled"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/spacing_small"
+                        android:paddingTop="@dimen/spacing_small"
+                        android:textSize="@dimen/text_larger"
+                        tools:text="Enabled" />
+                </android.support.v7.widget.CardView>
+
+                <ViewFlipper
+                    android:id="@+id/flipper_params"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:measureAllChildren="false">
+
+                    <LinearLayout
+                        android:id="@+id/view_generic_params"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_medium"
+                            android:layout_marginTop="@dimen/spacing_large"
+                            android:paddingLeft="@dimen/spacing_medium"
+                            android:paddingRight="@dimen/spacing_medium"
+                            android:text="@string/weather_source_details_params"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/text_large" />
+
+                        <LinearLayout
+                            android:id="@+id/view_params"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical" />
+                    </LinearLayout>
+
+                    <include layout="@layout/view_wunderground_params" />
+
+                    <include layout="@layout/view_netatmo_params" />
+                </ViewFlipper>
+
+                <LinearLayout
+                    android:id="@+id/view_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/include_line_separator" />
+
+                    <Button
+                        android:id="@+id/btn_defaults"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_padding"
+                        android:text="@string/weather_source_details_restore_defaults" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/include_progress" />
+
+        <include layout="@layout/include_error" />
+    </com.rainmachine.presentation.screens.weathersourcedetails.WeatherSourceDetailsView>
+</LinearLayout>

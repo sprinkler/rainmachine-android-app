@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/SectionHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/program_details_start_time" />
+
+    <include layout="@layout/include_divider" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_time_of_day"
+        style="@style/CardViewZoneStyle.SingleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_time_of_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:text="@string/program_details_time_of_day"
+                android:textSize="@dimen/text_larger" />
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/spacing_medium"
+                android:drawableRight="@drawable/ic_action_next_item"
+                android:gravity="center"
+                android:paddingLeft="@dimen/spacing_medium"
+                android:textColor="@color/main"
+                android:textSize="@dimen/text_larger"
+                tools:text="11:02 AM" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <include layout="@layout/include_divider" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_sunrise_sunset"
+        style="@style/CardViewZoneStyle.SingleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_sunrise_sunset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:drawableRight="@drawable/ic_action_next_item"
+                android:textSize="@dimen/text_larger"
+                tools:text="0 minutes before sunrise" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <include layout="@layout/include_divider" />
+</LinearLayout>

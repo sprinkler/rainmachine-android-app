@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.raindelay.RainDelayActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.raindelay.RainDelayView
+        android:id="@+id/view_restriction_live"
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_padding"
+                android:paddingLeft="@dimen/activity_horizontal_padding"
+                android:paddingRight="@dimen/activity_horizontal_padding"
+                android:paddingTop="@dimen/activity_vertical_padding">
+
+                <include layout="@layout/include_timer_rain_delay" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_padding"
+                android:paddingLeft="@dimen/activity_horizontal_padding"
+                android:paddingRight="@dimen/activity_horizontal_padding"
+                android:paddingTop="@dimen/activity_vertical_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/rain_delay_days"
+                            android:textSize="@dimen/text_large" />
+
+                        <com.shawnlin.numberpicker.NumberPicker
+                            android:id="@+id/picker_days"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:np_dividerColor="@color/main"
+                            app:np_height="180dp"
+                            app:np_max="364"
+                            app:np_min="0"
+                            app:np_textSize="@dimen/text_large"
+                            app:np_width="64dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/rain_delay_hours"
+                            android:textSize="@dimen/text_large" />
+
+                        <com.shawnlin.numberpicker.NumberPicker
+                            android:id="@+id/picker_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:np_dividerColor="@color/main"
+                            app:np_height="180dp"
+                            app:np_max="23"
+                            app:np_min="0"
+                            app:np_textSize="@dimen/text_large"
+                            app:np_width="64dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/rain_delay_minutes"
+                            android:textSize="@dimen/text_large" />
+
+                        <com.shawnlin.numberpicker.NumberPicker
+                            android:id="@+id/picker_minutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:np_dividerColor="@color/main"
+                            app:np_height="180dp"
+                            app:np_max="59"
+                            app:np_min="0"
+                            app:np_textSize="@dimen/text_large"
+                            app:np_width="64dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_snooze"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/all_snooze" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/rain_delay_explanation"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/include_progress" />
+
+        <include layout="@layout/include_error" />
+    </com.rainmachine.presentation.screens.raindelay.RainDelayView>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.programdetails.ProgramDetailsActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.programdetails.ProgramDetailsView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,28 @@
+machine:
+    environment:
+        CI: true
+
+dependencies:
+    cache_directories:
+        - ~/.android
+        - /usr/local/android-sdk-linux
+    override:
+        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-23.0.2,extra-google-m2repository,extra-google-google_play_services-8.1.0,extra-android-m2repository,extra-android-support
+        - ./gradlew dependencies
+        - echo n | android create avd --force -n "Nexus4" -t "android-19" --device "Nexus 4"
+        - cd ~/.android && rm -f debug.keystore && keytool -genkey -noprompt -v -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android -keyalg RSA -validity 14000 -dname "CN=kaciula, OU=ID, O=AB4, L=Hursley, S=Hants, C=GB"
+
+test:
+    pre:
+        - emulator -force-32bit -avd Nexus4 -no-audio -no-window -no-boot-anim:
+            background: true
+            parallel: true
+        - circle-android wait-for-boot
+    override:
+#        - ./gradlew testDebugUnitTest
+        - ./gradlew spoon
+        - ./gradlew assembleRelease
+    post:
+        - cp -r /home/ubuntu/android-app/RainMachine/build/outputs/apk/RainMachine-* $CIRCLE_ARTIFACTS
+#        - cp -r /home/ubuntu/android-app/RainMachine/build/reports/ $CIRCLE_TEST_REPORTS
+        - cp -r /home/ubuntu/android-app/RainMachine/build/spoon/ $CIRCLE_TEST_REPORTS

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.zonedetails.ZoneDetailsActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:measureAllChildren="true">
+
+        <include
+            android:id="@+id/view_main"
+            layout="@layout/view_zone_details_main" />
+
+        <include
+            android:id="@+id/view_advanced"
+            layout="@layout/view_zone_details_advanced" />
+
+        <include
+            android:id="@+id/view_weather"
+            layout="@layout/view_zone_details_weather" />
+
+        <include layout="@layout/include_progress" />
+
+        <include layout="@layout/include_error" />
+    </ViewFlipper>
+</LinearLayout>

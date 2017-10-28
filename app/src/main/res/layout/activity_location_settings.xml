@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.locationsettings.LocationSettingsActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_vertical_padding">
+
+        <TextView
+            android:id="@+id/tv_sprinkler_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_padding"
+            android:paddingRight="@dimen/activity_horizontal_padding"
+            android:textSize="@dimen/text_larger"
+            android:textStyle="italic" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <include layout="@layout/include_line_separator" />
+
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_padding"
+            android:layout_marginLeft="@dimen/activity_horizontal_padding"
+            android:layout_marginRight="@dimen/activity_horizontal_padding"
+            android:layout_marginTop="@dimen/activity_vertical_padding"
+            android:text="@string/location_settings_change" />
+    </LinearLayout>
+</LinearLayout>

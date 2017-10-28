@@ -1,0 +1,6 @@
+1. Auto-switching from Wi-Fi with no Internet
+http://stackoverflow.com/questions/20551658/disabling-samsung-auto-network-switch-for-wifi-connection
+
+2. old API for SPK1
+   - am means 0:0 am - 12:59 am
+   - pm means 13:00 - 23:59 -> 1:0 pm - 11:59 pm

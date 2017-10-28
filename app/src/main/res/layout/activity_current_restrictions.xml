@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.currentrestrictions.CurrentRestrictionsActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.currentrestrictions.CurrentRestrictionsView
+        android:id="@+id/flipper"
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/spacing_medium">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/view_snooze"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_snooze" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/card_snooze"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_snooze_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:paddingTop="@dimen/spacing_small"
+                                android:textSize="@dimen/text_larger"
+                                tools:text="23 hours 59 minutes" />
+
+                            <TextView
+                                android:id="@+id/tv_snooze_subtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:textSize="@dimen/text_medium"
+                                tools:text="RainMachine is PAUSED" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_rain_sensor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_rain_sensor" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/card_rain_sensor"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:paddingTop="@dimen/spacing_small"
+                                android:text="@string/current_restrictions_rain_detected"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_rain_sensor_subtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:textSize="@dimen/text_medium"
+                                tools:text="RainMachine is PAUSED for 1 day" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_freeze_protect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_freeze_protect" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/card_freeze_protect"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_freeze_protect_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:paddingTop="@dimen/spacing_small"
+                                android:textSize="@dimen/text_larger"
+                                tools:text="Freeze protect under 35 F" />
+
+                            <TextView
+                                android:id="@+id/tv_freeze_protect_subtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:textSize="@dimen/text_medium"
+                                tools:text="RainMachine is PAUSED" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_months" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/card_month"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_month_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:paddingTop="@dimen/spacing_small"
+                                android:textSize="@dimen/text_larger"
+                                tools:text="March restriction" />
+
+                            <TextView
+                                android:id="@+id/tv_month_subtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:textSize="@dimen/text_medium"
+                                tools:text="RainMachine is PAUSED" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_days" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/card_day"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_day_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:paddingTop="@dimen/spacing_small"
+                                android:textSize="@dimen/text_larger"
+                                tools:text="Wednesday restriction" />
+
+                            <TextView
+                                android:id="@+id/tv_day_subtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:textSize="@dimen/text_medium"
+                                tools:text="RainMachine is PAUSED" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/current_restrictions_hourly" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/card_hour"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_hour_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:paddingTop="@dimen/spacing_small"
+                                android:textSize="@dimen/text_larger"
+                                tools:text="Wednesday restriction" />
+
+                            <TextView
+                                android:id="@+id/tv_hour_subtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="@dimen/spacing_small"
+                                android:textSize="@dimen/text_medium"
+                                tools:text="RainMachine is PAUSED" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/include_progress" />
+
+        <include layout="@layout/include_error" />
+    </com.rainmachine.presentation.screens.currentrestrictions.CurrentRestrictionsView>
+</LinearLayout>

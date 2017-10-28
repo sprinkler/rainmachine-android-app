@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.wizardtimezone.WizardTimezoneActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.wizardtimezone.WizardTimezoneView
+        android:id="@+id/view_wizard_timezone"
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_padding"
+                android:paddingLeft="@dimen/activity_horizontal_padding"
+                android:paddingRight="@dimen/activity_horizontal_padding"
+                android:paddingTop="@dimen/activity_vertical_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        style="?android:attr/dropDownSpinnerStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:clickable="true"
+                        android:paddingLeft="@dimen/spacing_medium_large" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        style="?android:attr/dropDownSpinnerStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium_large"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:paddingLeft="@dimen/spacing_medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_timezone"
+                    style="?android:attr/dropDownSpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:clickable="true"
+                    android:paddingLeft="@dimen/spacing_medium_large" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="@string/all_save" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/include_progress" />
+
+        <include layout="@layout/include_error" />
+    </com.rainmachine.presentation.screens.wizardtimezone.WizardTimezoneView>
+</LinearLayout>

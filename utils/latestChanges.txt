@@ -1,0 +1,82 @@
+v4.2.1 Beta
+Hide Led delay option for now
+Update the way device information is rendered
+
+v4.2.0 Beta
+New screen for setting manual watering duration for zones on Mini-8
+New screen for selecting right / left hand interface option
+
+v4.1.23 Beta
+Add short and reboot as push notification settings
+Workaround in WUnderground stations screen where some stations do not have GPS coordinates information
+Fixes throughout the app
+
+v4.1.21 Beta
+New Mini8 Led settings: show restrictions on led and manually start a program
+
+v4.1.20 Beta
+Export scheduled/watered time as HH:MM:SS
+Fix: WUnderground weather station screen crash in some scenario
+Other various fixes throughout the app
+
+v4.1.19 Production
+Fix units bug
+Other fixes
+
+v4.1.19 Beta
+Export scheduled/watered time as HH:MM:SS
+Fix: WUnderground weather station screen crash in some scenario
+Other various fixes throughout the app
+
+v4.1.18 Beta
+Improvements to Devices screen
+Fix: Do not show zones with 0 seconds running duration as idle
+Improvements to Current Restrictions screen
+Move Rain Sensor screen to Settings
+Improvements to Rain Sensor screen. Shows when rain is detected
+Fix: Skipping WiFi setup no longer goes into an infinite loop
+
+v4.1.17 Production
+Split program watering durations for each week day when we use the Suggested zone duration
+Keep units setting on RainMachine itself
+Fix watering history display bug
+Add extra soil types for zones
+Add crop functionality for zone images
+New snooze functionality
+Rain sensor screen improvements
+
+v4.1.0
+- New zones and zone details screens
+- New programs and program details screens
+
+v4.0.20
+- Fix watering history screen to show most recent data for today
+- Display improvements on small screen devices
+
+v4.0.19
+- Improve switching from Wi-Fi to remote access and back
+- Improve Wi-Fi communication when coming back to the app
+- Load year dashboard faster when accessing device via remote access
+- Cache data to make the screens load faster
+- Better formatting for watering history export
+- Show start time for zones in watering history screen
+- Show max percentage for over watering when enabling Hot Days restriction
+- Set maximum number of cycles for a program to 300
+- Watering history available for last 7 days, 31 days and 365 days
+
+v4.0.18
+- Fix "Session expired" issue
+- Other minor fixes
+
+v4.0.17
+- show option to manually restore from backup in System Settings
+- rigorously validate the remote access email provided by the user
+- automatically save backups for the last 10 modifications for each RainMachine device
+- add possibility to set minutes and seconds for Master Valve on Mini-8 and Touch HD
+- the export file for watering history now contains information for each cycle
+- remove software rain sensor setting from Advanced Settings
+- move Use correction for past setting in the Weather Sensitivity screen
+- group Rain sensor settings in the Restrictions screen
+- fix issue on Android 6 related to coming back to the app after moving from a mobile data connection to a WiFi connection
+- save default max watering coefficient value to 150%
+- detect devices that have "Auto network switch" option enabled and encourage users to disable this option to ensure more reliable Wi-Fi connectivity during the initial setup

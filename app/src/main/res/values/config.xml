@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+    <string name="config_com.google.android.maps.v2.api_key" translatable="false">AIzaSyB-cIbs9qjJ711JF86TcJ0Y4dMxxkZg034</string>
+</resources>

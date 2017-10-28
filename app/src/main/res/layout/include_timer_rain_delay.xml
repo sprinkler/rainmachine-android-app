@@ -1,0 +1,41 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.screens.raindelay.RainDelayActivity"
+    tools:showIn="@layout/activity_rain_delay">
+
+    <TextView
+        android:id="@+id/timer_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/text_watering"
+        android:textSize="@dimen/text_timer" />
+
+    <LinearLayout
+        android:id="@+id/plus_minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_down"
+            android:layout_width="@dimen/width_up_down"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:src="@drawable/selector_minus" />
+
+        <ImageView
+            android:id="@+id/btn_up"
+            android:layout_width="@dimen/width_up_down"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:src="@drawable/selector_plus" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_start" />
+</merge>

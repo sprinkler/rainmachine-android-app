@@ -1,0 +1,110 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="ScreenMargins">
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="ActionButtonCustomStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/main</item>
+    </style>
+
+    <style name="ActionBarTabTextCustomStyle" parent="Widget.AppCompat.ActionBar.TabText" />
+
+    <style name="AppThemeProgressBarHorizontalStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/rain_progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">
+            @drawable/rain_progress_indeterminate_horizontal_holo_light
+        </item>
+    </style>
+
+    <style name="AppThemeSeekBarStyle" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressDrawable">
+            @drawable/rain_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/rain_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:thumb">@drawable/rain_scrubber_control_selector_holo_light</item>
+    </style>
+
+    <style name="AppThemeSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/rain_spinner_background_holo_light</item>
+        <item name="android:dropDownSelector">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="AppThemeButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rain_btn_default_holo_light</item>
+        <item name="android:textColor">@color/text_white</item>
+        <!--<item name="android:textSize">@dimen/text_larger</item>-->
+    </style>
+
+    <style name="AppThemeSpinnerItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="AppThemeSpinnerDropDownItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="AppThemeDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/main</item>
+    </style>
+
+    <style name="AppThemeAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/main</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/rain_btn_radio_holo_light</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/rain_btn_check_holo_light</item>
+    </style>
+
+    <style name="AppThemeEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardCornerRadius">0dp</item>
+        <item name="contentPadding">@dimen/padding_card</item>
+    </style>
+
+    <style name="CardViewZoneStyle" parent="CardView">
+        <item name="cardCornerRadius">0dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPaddingTop">8dp</item>
+        <item name="contentPaddingBottom">8dp</item>
+        <item name="contentPaddingLeft">16dp</item>
+        <item name="contentPaddingRight">16dp</item>
+    </style>
+
+    <style name="CardViewZoneStyle.SingleLine">
+        <item name="android:minHeight">@dimen/min_height_row_one_line</item>
+    </style>
+
+    <style name="SectionHeader">
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">@dimen/text_larger</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="Section">
+        <item name="android:background">@drawable/selector_item</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">@dimen/min_height_row_two_lines</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">@dimen/spacing_medium</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_padding</item>
+        <item name="android:paddingTop">@dimen/spacing_medium</item>
+    </style>
+</resources>

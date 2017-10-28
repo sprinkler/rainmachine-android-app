@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_white"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/chart_periods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/week_button"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/week_button_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="week"
+            android:textColor="@drawable/text_selector"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/month_button"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginRight="-2dp"
+            android:background="@drawable/month_button_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="month"
+            android:textColor="@drawable/text_selector"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/year_button"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/year_button_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="year"
+            android:textColor="@drawable/text_selector"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/gray_light" />
+
+    <com.rainmachine.presentation.screens.stats.dashboard.CustomScrollView
+        android:id="@+id/charts_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+    </com.rainmachine.presentation.screens.stats.dashboard.CustomScrollView>
+</LinearLayout>

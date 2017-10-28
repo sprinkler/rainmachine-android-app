@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_vitals"
+        android:paddingRight="@dimen/padding_vitals"
+        android:textColor="@color/white" />
+
+    <com.rainmachine.presentation.widgets.ThinDividerView
+        android:id="@+id/divider_title"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:paddingLeft="@dimen/padding_vitals"
+        android:paddingRight="@dimen/padding_vitals" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
+
+        <com.rainmachine.presentation.widgets.CirclePercentageView
+            android:id="@+id/view_percentage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:paddingLeft="@dimen/padding_vitals" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/padding_vitals">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:lineSpacingMultiplier="1.3"
+                android:textColor="@color/white"
+                tools:text="Next watering cycle starts:\n Fri, Dec 11, 2015 at 11:02" />
+
+            <com.rainmachine.presentation.widgets.ThinDividerView
+                android:id="@+id/divider_weather1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/last_weather_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_white_24dp"
+                android:textColor="@color/white"
+                tools:text="Last weather update: 2 days ago" />
+
+            <com.rainmachine.presentation.widgets.ThinDividerView
+                android:id="@+id/divider_weather2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

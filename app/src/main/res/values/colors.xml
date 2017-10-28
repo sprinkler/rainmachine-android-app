@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main">#3399CC</color>
+    <color name="water">#76a8cc</color>
+    <color name="water_stroke">#3B87AD</color>
+
+    <color name="map_circle_stroke">#3399CC</color>
+    <color name="map_circle_fill">#883399CC</color>
+
+    <color name="bg">#E9E9E9</color>
+    <color name="bg_drawer">#EE222222</color>
+    <color name="bg_zone_details">#212F3F</color>
+    <color name="bg_circle_percentage">#006ca2</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_black_dark">#88000000</color>
+    <color name="transparent_black_darker">#99000000</color>
+    <color name="transparent_blue">#663399CC</color>
+    <color name="transparent_red">#88FF0000</color>
+    <color name="gray_light">#CCCCCC</color>
+    <color name="gray_dark">#aaaaaa</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="green">#689f38</color>
+    <color name="red">#FF0000</color>
+
+    <!-- Log colors in hidden drawer -->
+    <color name="dd_debug_log_background">#ffeeeeee</color>
+    <color name="dd_debug_log_accent_debug">#2196F3</color>
+    <color name="dd_debug_log_accent_info">#8BC34A</color>
+    <color name="dd_debug_log_accent_warn">#FFC107</color>
+    <color name="dd_debug_log_accent_error">#F44336</color>
+    <color name="dd_debug_log_accent_unknown">#9C27B0</color>
+    <color name="dd_debug_log_level_text">#ffffffff</color>
+</resources>

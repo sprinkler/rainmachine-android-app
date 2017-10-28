@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rainmachine">
+
+    <uses-feature android:name="android.hardware.touchscreen" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- Location Permission Group -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Camera Permission Group -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Storage Permission Group -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="${applicationId}.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="${applicationId}.gcm.permission.C2D_MESSAGE" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-sdk xmlns:tools="http://schemas.android.com/tools"
+        tools:overrideLibrary="timber.log" />
+
+    <application
+        android:name=".infrastructure.util.RainApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/all_app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".presentation.activities.DelegateActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/all_app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.screens.devices.DevicesActivity"
+            android:label="@string/all_devices" />
+        <activity
+            android:name=".presentation.screens.networksettings.NetworkSettingsActivity"
+            android:label="@string/all_network_settings" />
+        <activity
+            android:name=".presentation.screens.directaccess.DirectAccessActivity"
+            android:label="@string/all_direct_access" />
+        <activity
+            android:name=".presentation.screens.pushnotifications.PushNotificationsActivity"
+            android:label="@string/all_notifications" />
+        <activity android:name=".presentation.screens.login.LoginActivity" />
+        <activity android:name=".presentation.screens.main.MainActivity" />
+        <activity
+            android:name=".presentation.screens.programdetails.ProgramDetailsActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".presentation.screens.programdetailszones.ProgramDetailsZonesActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".presentation.screens.programdetailsfrequency.ProgramDetailsFrequencyActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".presentation.screens.programdetailsstarttime.ProgramDetailsStartTimeActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".presentation.screens.programdetailsadvanced.ProgramDetailsAdvancedActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".presentation.screens.programdetailsold.ProgramDetailsOldActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".presentation.screens.zonedetails.ZoneDetailsActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".presentation.screens.raindelay.RainDelayActivity" />
+        <activity android:name=".presentation.screens.systemsettings.SystemSettingsActivity" />
+        <activity android:name=".presentation.screens.advancedsettings.AdvancedSettingsActivity" />
+        <activity android:name=".presentation.screens.mini8settings.Mini8SettingsActivity" />
+        <activity android:name=".presentation.screens.about.AboutActivity" />
+        <activity android:name=".presentation.screens.restrictions.RestrictionsActivity" />
+        <activity android:name=".presentation.screens.location.LocationActivity" />
+        <activity android:name=".presentation.screens.wifi.WifiActivity" />
+        <activity android:name=".presentation.screens.hours.HoursActivity" />
+        <activity android:name=".presentation.screens.savehourlyrestriction.SaveHourlyRestrictionActivity" />
+        <activity
+            android:name=".presentation.screens.wizarddevicename.WizardDeviceNameActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".presentation.screens.wizardpassword.WizardPasswordActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".presentation.screens.wizardtimezone.WizardTimezoneActivity" />
+        <activity android:name=".presentation.screens.wizardremoteaccess.WizardRemoteAccessActivity" />
+        <activity
+            android:name=".presentation.screens.cloudaccounts.CloudAccountsActivity"
+            android:label="@string/all_remote_access" />
+        <activity android:name=".presentation.screens.remoteaccess.RemoteAccessActivity" />
+        <activity
+            android:name=".presentation.screens.sprinklerdelegate.SprinklerDelegateActivity"
+            android:noHistory="true" />
+        <activity android:name=".presentation.screens.weathersettings.WeatherSettingsActivity" />
+        <activity android:name=".presentation.screens.weathersources.WeatherSourcesActivity" />
+        <activity android:name=".presentation.screens.weathersourcedetails.WeatherSourceDetailsActivity" />
+        <activity android:name=".presentation.screens.nearbystations.NearbyStationsActivity" />
+        <activity android:name=".presentation.screens.rainsensitivity.RainSensitivityActivity" />
+        <activity android:name=".presentation.screens.statsdetails.StatsDetailsActivity" />
+        <activity android:name=".presentation.screens.physicaltouch.PhysicalTouchActivity" />
+        <activity android:name=".presentation.screens.locationsettings.LocationSettingsActivity" />
+        <activity android:name=".presentation.screens.wateringhistory.WateringHistoryActivity" />
+        <activity android:name=".presentation.screens.windsensitivity.WindSensitivityActivity" />
+        <activity android:name=".presentation.screens.rainsensor.RainSensorActivity" />
+        <activity android:name=".presentation.screens.weathersensitivity.WeatherSensitivityActivity" />
+        <activity android:name=".presentation.screens.currentrestrictions.CurrentRestrictionsActivity" />
+        <activity android:name=".presentation.screens.restorebackup.RestoreBackupActivity" />
+        <activity android:name=".presentation.screens.dashboardgraphs.DashboardGraphsActivity" />
+        <activity android:name=".presentation.screens.web.WebActivity" />
+        <activity android:name=".presentation.screens.help.HelpActivity" />
+        <activity android:name=".presentation.screens.offline.OfflineActivity" />
+        <activity android:name=".presentation.screens.softwareupdate.SoftwareUpdateActivity" />
+        <activity android:name=".presentation.screens.crop.CropActivity" />
+        <activity android:name=".presentation.screens.wateringduration.WateringDurationActivity" />
+
+        <receiver
+            android:name=".infrastructure.receivers.OnConnectivityChangeReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".infrastructure.gcm.RainGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".infrastructure.gcm.RainInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".infrastructure.tasks.UploadZoneImageService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".infrastructure.tasks.UpdatePushNotificationSettingsService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".infrastructure.tasks.DeleteZoneImageService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${providerFileAuthority}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/config_com.google.android.maps.v2.api_key" />
+    </application>
+
+</manifest>

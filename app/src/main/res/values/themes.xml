@@ -1,0 +1,38 @@
+<resources>
+
+    <style name="BaseAppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorTertiary">@color/text_primary</item>
+
+        <item name="colorPrimary">#222222</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/main</item>
+
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="dialogTheme">@style/AppThemeDialogStyle</item>
+        <item name="alertDialogTheme">@style/AppThemeAlertDialogStyle</item>
+
+        <item name="buttonStyle">@style/AppThemeButtonStyle</item>
+        <item name="numberPickerStyle">@style/NPWidget.Holo.Light.NumberPicker</item>
+        <item name="spinnerStyle">@style/AppThemeSpinnerStyle</item>
+        <item name="android:dropDownSpinnerStyle">@style/AppThemeSpinnerStyle</item>
+        <item name="android:spinnerItemStyle">@style/AppThemeSpinnerItemStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/AppThemeSpinnerDropDownItemStyle</item>
+        <item name="android:progressBarStyle">@style/AppThemeProgressBarHorizontalStyle</item>
+        <item name="editTextStyle">@style/AppThemeEditTextStyle</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/rain_btn_check_holo_light</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/rain_btn_radio_holo_light</item>
+        <item name="android:listChoiceBackgroundIndicator">?attr/selectableItemBackground
+        </item>
+        <item name="android:seekBarStyle">@style/AppThemeSeekBarStyle</item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/rain_activated_background_holo_light
+        </item>
+        <item name="android:fastScrollThumbDrawable">@drawable/rain_fastscroll_thumb_holo</item>
+    </style>
+
+    <!-- Application theme -->
+    <style name="AppTheme" parent="BaseAppTheme" />
+</resources>

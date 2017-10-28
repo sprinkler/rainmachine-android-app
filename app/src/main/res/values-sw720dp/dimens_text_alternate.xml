@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_timer">140sp</dimen>
+    <dimen name="text_timer_rain_delay">110sp</dimen>
+
+    <!-- Font sizes + 4sp on phone sizes -->
+    <dimen name="text_small">16sp</dimen>
+    <dimen name="text_medium">18sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_larger">22sp</dimen>
+    <dimen name="text_xlarge">24sp</dimen>
+    <dimen name="text_xxlarge">26sp</dimen>
+</resources>

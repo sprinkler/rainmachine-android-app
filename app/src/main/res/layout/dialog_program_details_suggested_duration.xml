@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_default_zone_properties"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_action_next_item"
+        android:paddingLeft="32dp"
+        android:text="@string/program_details_zone_settings_default"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_large" />
+
+    <TextView
+        android:id="@+id/tv_determined_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@color/main"
+        android:textSize="@dimen/text_xlarge"
+        tools:text="47 min 42 sec" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="@string/program_details_adjust"
+            android:textSize="@dimen/text_larger" />
+
+        <include layout="@layout/include_plus_minus" />
+
+        <TextView
+            android:id="@+id/tv_user_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/main"
+            android:textSize="@dimen/text_larger"
+            tools:text="100%" />
+    </LinearLayout>
+</LinearLayout>

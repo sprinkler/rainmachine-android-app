@@ -1,0 +1,534 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.systemsettings.SystemSettingsActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.systemsettings.SystemSettingsView
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SectionHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_settings_network_remote_access" />
+
+                <include layout="@layout/include_divider" />
+
+                <LinearLayout
+                    android:id="@+id/view_device_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all_device_name"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_device_name"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix"
+                            tools:text="Rainy" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_network_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all_network_settings"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/system_settings_wifi"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_remote_access"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all_remote_access"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_email"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/SectionHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_settings_location_date" />
+
+                <include layout="@layout/include_divider" />
+
+                <LinearLayout
+                    android:id="@+id/view_location_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/system_settings_location"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_sprinkler_address"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/system_settings_location"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_date"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/system_settings_date"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        fontPath="fonts/Roboto-Light.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_medium"
+                        tools:ignore="MissingPrefix"
+                        tools:text="2016/11/08" />
+                </LinearLayout>
+
+                <include layout="@layout/include_divider" />
+
+                <LinearLayout
+                    android:id="@+id/view_time"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/system_settings_time"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        fontPath="fonts/Roboto-Light.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_medium"
+                        tools:ignore="MissingPrefix"
+                        tools:text="12:54" />
+                </LinearLayout>
+
+                <include layout="@layout/include_divider" />
+
+                <LinearLayout
+                    android:id="@+id/view_hour_format"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/system_settings_use_hour_format"
+                            android:textSize="@dimen/text_larger" />
+
+                        <CheckBox
+                            android:id="@+id/check_hour_format"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_timezone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/system_settings_timezone"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_timezone"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix"
+                            tools:text="Europe/Bucharest" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_units"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/system_settings_units"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:id="@+id/tv_units"
+                        fontPath="fonts/Roboto-Light.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_medium"
+                        tools:ignore="MissingPrefix"
+                        tools:text="US" />
+                </LinearLayout>
+
+                <include layout="@layout/include_divider" />
+
+                <LinearLayout
+                    android:id="@+id/container_restore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/system_settings_restore" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/view_restore_backup"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all_restore_backup"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_restore_subtitle"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/system_settings_restore_backup_info"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/include_divider" />
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/system_settings_pin" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/view_generate_pin"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/system_settings_generate_pin"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/system_settings_generate_pin_info"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/include_divider" />
+
+                <LinearLayout
+                    android:id="@+id/container_reboot_reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/system_settings_reboot_reset" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/view_reboot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            style="@style/Section"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/system_settings_reboot"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/system_settings_reboot_info"
+                                android:textSize="@dimen/text_medium"
+                                tools:ignore="MissingPrefix" />
+                        </LinearLayout>
+
+                        <include layout="@layout/include_divider" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_reset_defaults"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            style="@style/Section"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/system_settings_reset_defaults"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/system_settings_reset_defaults_info"
+                                android:textSize="@dimen/text_medium"
+                                tools:ignore="MissingPrefix" />
+                        </LinearLayout>
+
+                        <include layout="@layout/include_divider" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/SectionHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_settings_updates" />
+
+                <include layout="@layout/include_divider" />
+
+                <LinearLayout
+                    android:id="@+id/view_software_update"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_software_update"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <include layout="@layout/include_divider" />
+
+                <LinearLayout
+                    android:id="@+id/container_advanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/system_settings_advanced" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/view_advanced_settings"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all_advanced_settings"
+                            android:textSize="@dimen/text_larger" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/view_mini8_settings"
+                        style="@style/Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/system_settings_mini8_settings"
+                            android:textSize="@dimen/text_larger" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/include_progress" />
+
+        <include layout="@layout/include_error" />
+    </com.rainmachine.presentation.screens.systemsettings.SystemSettingsView>
+</LinearLayout>

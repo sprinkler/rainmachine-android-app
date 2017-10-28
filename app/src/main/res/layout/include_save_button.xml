@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionbar_save"
+    style="@style/ActionButtonCustomStyle"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <TextView
+        style="@style/ActionBarTabTextCustomStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_action_accept"
+        android:drawablePadding="@dimen/padding_drawable_ab"
+        android:gravity="center_vertical"
+        android:text="@string/all_save" />
+</FrameLayout>

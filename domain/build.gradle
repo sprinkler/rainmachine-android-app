@@ -1,0 +1,21 @@
+repositories {
+    maven { url "https://clojars.org/repo/" }
+    maven { url "https://jitpack.io" }
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compileOnly 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compileOnly 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
+    compileOnly 'com.github.pakoito:RxTuples2:1.0.0'
+    compileOnly 'joda-time:joda-time:2.9.7'
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$KOTLIN_VERSION"
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/SectionHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all_frequency" />
+
+    <include layout="@layout/include_divider" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_daily"
+        style="@style/CardViewZoneStyle.SingleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/program_details_daily"
+            android:textSize="@dimen/text_larger" />
+    </android.support.v7.widget.CardView>
+
+    <include layout="@layout/include_divider" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_odd_days"
+        style="@style/CardViewZoneStyle.SingleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_odd_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/program_details_odd_days"
+            android:textSize="@dimen/text_larger" />
+    </android.support.v7.widget.CardView>
+
+    <include layout="@layout/include_divider" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_even_days"
+        style="@style/CardViewZoneStyle.SingleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_even_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/program_details_even_days"
+            android:textSize="@dimen/text_larger" />
+    </android.support.v7.widget.CardView>
+
+    <include layout="@layout/include_divider" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_every_n_days"
+        style="@style/CardViewZoneStyle.SingleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_every_n_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="false"
+            android:drawableRight="@drawable/ic_action_next_item"
+            android:textSize="@dimen/text_larger"
+            tools:text="@string/program_details_every" />
+    </android.support.v7.widget.CardView>
+
+    <include layout="@layout/include_divider" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_week_days"
+        style="@style/CardViewZoneStyle.SingleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_selected_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:drawableRight="@drawable/ic_action_next_item"
+                android:text="@string/program_details_selected_days"
+                android:textSize="@dimen/text_larger" />
+
+            <TextView
+                android:id="@+id/tv_weekdays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:textSize="@dimen/text_larger"
+                android:visibility="gone"
+                tools:text="Mon, Wed"
+                tools:visibility="visible" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <include layout="@layout/include_divider" />
+
+    <include
+        layout="@layout/include_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_large" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_next_run"
+        style="@style/CardViewZoneStyle.SingleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_next_run_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/program_details_next_run"
+                android:textSize="@dimen/text_larger" />
+
+            <TextView
+                android:id="@+id/tv_next_run"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/spacing_medium"
+                android:drawableRight="@drawable/ic_action_next_item"
+                android:gravity="center"
+                android:paddingLeft="@dimen/spacing_medium"
+                android:textColor="@color/main"
+                android:textSize="@dimen/text_larger"
+                tools:text="Aug 19, 2016" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <include layout="@layout/include_divider" />
+</LinearLayout>

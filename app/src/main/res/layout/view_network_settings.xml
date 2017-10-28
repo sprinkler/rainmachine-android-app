@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainmachine.presentation.screens.networksettings.NetworkSettingsView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_network_settings"
+    style="@style/ScreenMargins"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="?android:attr/listDivider"
+        android:orientation="vertical"
+        android:showDividers="middle|end">
+
+        <LinearLayout
+            android:id="@+id/view_local_discovery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/min_height_row_two_lines"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/spacing_medium"
+            android:paddingLeft="@dimen/activity_horizontal_padding"
+            android:paddingRight="@dimen/activity_horizontal_padding"
+            android:paddingTop="@dimen/spacing_medium">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/network_settings_local_discovery"
+                    android:textSize="@dimen/text_larger" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/toggle_local_discovery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:lineSpacingMultiplier="1.0"
+                android:paddingBottom="@dimen/spacing_medium"
+                android:paddingTop="@dimen/spacing_medium"
+                android:text="@string/network_settings_help_local_discovery"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_port_forward_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/min_height_row_two_lines"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/spacing_medium"
+            android:paddingLeft="@dimen/activity_horizontal_padding"
+            android:paddingRight="@dimen/activity_horizontal_padding"
+            android:paddingTop="@dimen/spacing_medium">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/all_direct_access"
+                android:textSize="@dimen/text_larger" />
+        </LinearLayout>
+    </LinearLayout>
+</com.rainmachine.presentation.screens.networksettings.NetworkSettingsView>

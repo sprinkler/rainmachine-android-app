@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="?attr/actionBarDivider"
+    android:dividerPadding="@dimen/padding_divider_ab"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+    <include layout="@layout/include_discard_button" />
+
+    <include layout="@layout/include_save_button" />
+
+    <include layout="@layout/include_refresh_button" />
+</LinearLayout>

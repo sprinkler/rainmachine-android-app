@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.wifi.WifiActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.wifi.WifiView
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbarStyle="outsideOverlay" />
+
+            <include layout="@layout/include_line_separator" />
+
+            <Button
+                android:id="@+id/btn_add_network"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_padding"
+                android:layout_marginLeft="@dimen/activity_horizontal_padding"
+                android:layout_marginRight="@dimen/activity_horizontal_padding"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:text="@string/wifi_add_network" />
+        </LinearLayout>
+
+        <include layout="@layout/include_progress" />
+    </com.rainmachine.presentation.screens.wifi.WifiView>
+</LinearLayout>

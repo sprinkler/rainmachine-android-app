@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="activity_horizontal_padding">16dp</dimen>
+    <dimen name="activity_vertical_padding">16dp</dimen>
+
+    <dimen name="padding_seek_bar_top">16dp</dimen>
+    <dimen name="padding_radio_buttons">0dp</dimen>
+
+    <dimen name="min_height_row_one_line">64dp</dimen>
+    <dimen name="min_height_row_two_lines">64dp</dimen>
+
+    <!-- Zone details screen -->
+    <dimen name="zone_image_height">150dp</dimen>
+
+    <!-- Cycle & soak dialog -->
+    <dimen name="padding_cycle_soak">4dp</dimen>
+    <dimen name="text_cycle_soak">16sp</dimen>
+
+    <!-- General dimensions -->
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_medium_large">12dp</dimen>
+    <dimen name="spacing_large">16dp</dimen>
+    <dimen name="spacing_large_xlarge">24dp</dimen>
+</resources>

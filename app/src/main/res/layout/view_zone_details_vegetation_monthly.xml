@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zone_details_crop_coefficient_title" />
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_january"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_january"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_february"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_february"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_march"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_march"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_april"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_april"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_may"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_may"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_june"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_june"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_july"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_july"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_august"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_august"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_september"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_september"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_october"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_october"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_november"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_november"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_december"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_decimal_percentage"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input_kc_december"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minEms="4"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+    </LinearLayout>
+</ScrollView>

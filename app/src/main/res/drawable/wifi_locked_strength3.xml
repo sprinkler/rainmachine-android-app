@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/wifi_strength3" />
+    <item
+        android:drawable="@drawable/wifi_lock"
+        android:left="@dimen/wifi_icon_inset"
+        android:top="@dimen/wifi_icon_inset" />
+</layer-list>

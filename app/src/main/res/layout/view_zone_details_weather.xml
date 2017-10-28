@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainmachine.presentation.screens.zonedetails.ZoneDetailsWeatherView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/include_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/spacing_large" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height_row_one_line">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_weather_data"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_weather_data_hint"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_medium" />
+                </LinearLayout>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/toggle_weather_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/spacing_medium" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height_row_one_line">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_historical_data"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_historical_data_hint"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_medium" />
+                </LinearLayout>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/toggle_historical_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/spacing_medium" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <android.support.v7.widget.CardView
+            style="@style/CardViewZoneStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height_row_one_line">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_do_not_adjust"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zone_details_adjust_hint"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/text_medium" />
+                </LinearLayout>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/toggle_adjust"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/spacing_medium" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <include layout="@layout/include_divider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/zone_details_weather_info"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_medium" />
+    </LinearLayout>
+</com.rainmachine.presentation.screens.zonedetails.ZoneDetailsWeatherView>

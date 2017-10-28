@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.advancedsettings.AdvancedSettingsActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.advancedsettings.AdvancedSettingsView
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="?android:attr/listDivider"
+                android:orientation="vertical"
+                android:showDividers="middle|end">
+
+                <LinearLayout
+                    android:id="@+id/view_amazon_alexa"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingRight="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/advanced_settings_amazon_alexa"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/advanced_settings_amazon_alexa_subtitle"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/check_amazon_alexa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_beta_updates"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingRight="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/advanced_settings_beta_updates"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/advanced_settings_beta_updates_subtitle"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/check_beta_updates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_ssh_access"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/advanced_settings_ssh_access"
+                        android:textSize="@dimen/text_larger" />
+
+                    <CheckBox
+                        android:id="@+id/check_ssh_access"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_interface_options"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/spacing_medium"
+                        android:text="@string/all_interface_options"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:id="@+id/tv_interface_option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_larger"
+                        tools:text="Right Hand" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_log_level"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/spacing_medium"
+                        android:text="@string/advanced_settings_log_level"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:id="@+id/tv_log_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_larger"
+                        tools:text="Normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_bonjour"
+                    style="@style/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingRight="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/advanced_settings_bonjour_service"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/advanced_settings_bonjour_subtitle"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/check_bonjour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/include_progress" />
+
+        <include layout="@layout/include_error" />
+    </com.rainmachine.presentation.screens.advancedsettings.AdvancedSettingsView>
+</LinearLayout>

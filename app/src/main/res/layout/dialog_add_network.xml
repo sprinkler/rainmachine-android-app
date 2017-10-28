@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wifi_network_ssid"
+            android:textSize="@dimen/text_larger" />
+
+        <EditText
+            android:id="@+id/input_ssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wifi_enter_ssid"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/wifi_security"
+            android:textSize="@dimen/text_larger" />
+
+        <Spinner
+            android:id="@+id/spinner_security"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/spacing_medium" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/all_password"
+            android:textSize="@dimen/text_larger"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wifi_enter_password"
+            android:inputType="textPassword"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/check_show_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/all_show_password"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/check_advanced_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wifi_advanced_options" />
+
+        <TextView
+            android:id="@+id/tv_ip_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/wifi_ip_settings"
+            android:textSize="@dimen/text_larger"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/spinner_ip_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/view_address_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/wifi_title_ip_address"
+                android:textSize="@dimen/text_larger" />
+
+            <EditText
+                android:id="@+id/input_ip_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/wifi_hint_ip_address"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/wifi_title_netmask"
+                android:textSize="@dimen/text_larger" />
+
+            <EditText
+                android:id="@+id/input_netmask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/wifi_hint_netmask"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/wifi_title_gateway"
+                android:textSize="@dimen/text_larger" />
+
+            <EditText
+                android:id="@+id/input_gateway"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/wifi_hint_gateway"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/wifi_title_dns"
+                android:textSize="@dimen/text_larger" />
+
+            <EditText
+                android:id="@+id/input_dns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/wifi_hint_dns"
+                android:inputType="text" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

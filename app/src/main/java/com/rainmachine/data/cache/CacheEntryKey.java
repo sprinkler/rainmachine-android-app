@@ -1,0 +1,6 @@
+package com.rainmachine.data.cache;
+
+public enum CacheEntryKey {
+    DEVICE_NAME, PROVISION, ZONES_PROPERTIES, GLOBAL_RESTRICTIONS,
+    HOURLY_RESTRICTIONS, PROGRAMS, BETA_UPDATES
+}

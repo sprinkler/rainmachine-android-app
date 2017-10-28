@@ -1,0 +1,32 @@
+#SPK1
+(need to first mount card and modify init.rc to enable sshd)
+ssh root@IP (no pass)
+
+# Start web
+lighttpd -f /data/data/com.sprinkler.ui/config &
+
+#SPK2
+ssh root@IP (pass: rainmachine)
+
+# Update links
+/etc/opkg.conf
+src/gz barrier_breaker http://updates3.rainmachine.com/rainmachine-ar71xx-beta/packages
+
+http://update1-new.rainmachine.com/static/sprinkler-beta
+http://ns.tremend.ro/web/sprinkler/spk1-update-test
+http://hall.linuxconsulting.ro/sprinkler/beta-updates
+http://update2.rainmachine.com/sprinkler
+http://update1.rainmachine.com/static/sprinkler
+
+# SPK2 change cloud server for dev for push
+vim /etc/rainmachine-cloud/factory_ip.txt
+pe prima linie sa scrie dev.certs1.ra.....
+save + exit
+
+vim /etc/rainmachine-cloud/proxies.txt
+sa contina:
+1
+54.76.38.236
+
+rm -rf /rainmachine-cloud/certs
+/etc/init.d/rainmachine-cloud restart

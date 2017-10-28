@@ -1,0 +1,40 @@
+<com.rainmachine.presentation.screens.directaccess.DirectAccessView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScreenMargins"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.directaccess.DirectAccessActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbarStyle="outsideOverlay" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:lineSpacingMultiplier="1.0"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:paddingLeft="@dimen/activity_horizontal_padding"
+        android:paddingRight="@dimen/activity_horizontal_padding"
+        android:paddingTop="@dimen/spacing_medium"
+        android:text="@string/direct_access_help"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_medium" />
+
+    <include layout="@layout/include_line_separator" />
+
+    <Button
+        android:id="@+id/btn_add_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_padding"
+        android:layout_marginLeft="@dimen/activity_horizontal_padding"
+        android:layout_marginRight="@dimen/activity_horizontal_padding"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:text="@string/direct_access_add_device" />
+</com.rainmachine.presentation.screens.directaccess.DirectAccessView>

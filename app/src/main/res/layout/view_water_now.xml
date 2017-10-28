@@ -1,0 +1,30 @@
+<com.rainmachine.presentation.screens.waternow.WaterNowView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.screens.main.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_stop_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="32dp"
+            android:layout_marginRight="32dp"
+            android:src="@drawable/ic_stop_white_bg_transparent"
+            app:backgroundTint="@color/red"
+            app:fabSize="normal" />
+    </FrameLayout>
+
+    <include layout="@layout/include_progress" />
+</com.rainmachine.presentation.screens.waternow.WaterNowView>

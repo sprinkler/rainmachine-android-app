@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="match_parent"
+    tools:layout_width="match_parent"
+    tools:parentTag="ViewFlipper">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_padding">
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="16dp"
+                        android:text="@string/zone_details_name"
+                        android:textSize="@dimen/text_larger" />
+
+                    <EditText
+                        android:id="@+id/input_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textShortMessage" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_start_time"
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/program_details_start_time"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:id="@+id/tv_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/spacing_medium"
+                        android:drawableRight="@drawable/ic_action_next_item"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:textColor="@color/main"
+                        android:textSize="@dimen/text_larger"
+                        tools:text="15 min after sunrise" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_frequency"
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/all_frequency"
+                        android:textSize="@dimen/text_larger" />
+
+                    <TextView
+                        android:id="@+id/tv_frequency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/spacing_medium"
+                        android:drawableRight="@drawable/ic_action_next_item"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:textColor="@color/main"
+                        android:textSize="@dimen/text_larger"
+                        tools:text="Daily" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <TextView
+                android:id="@+id/tv_next_run"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_medium"
+                android:paddingTop="8dp"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_medium"
+                tools:text="Next run on Fri Aug 19, 2016 at 15 min after sunrise" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_advanced_settings"
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/program_details_advanced_settings"
+                        android:textSize="@dimen/text_larger" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_medium"
+                android:paddingTop="8dp"
+                android:text="@string/program_details_advanced_hint"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                style="@style/SectionHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/program_details_total_watering_time" />
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_total_watering"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/main"
+                        android:textSize="@dimen/text_larger"
+                        tools:text="10 min 40 sec" />
+
+                    <include layout="@layout/include_plus_minus" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/include_divider" />
+
+            <TextView
+                style="@style/SectionHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/program_details_zone_name" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_zones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <include layout="@layout/include_divider" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        layout="@layout/include_progress"
+        tools:visibility="gone" />
+</merge>

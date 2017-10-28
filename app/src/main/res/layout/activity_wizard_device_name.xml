@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.wizarddevicename.WizardDeviceNameActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.wizarddevicename.WizardDeviceNameView
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_padding"
+                android:paddingLeft="@dimen/activity_horizontal_padding"
+                android:paddingRight="@dimen/activity_horizontal_padding"
+                android:paddingTop="@dimen/activity_vertical_padding">
+
+                <EditText
+                    android:id="@+id/input_device_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/all_device_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text|textCapSentences"
+                    android:textSize="@dimen/text_larger" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="@string/all_set_password"
+                    android:textSize="@dimen/text_larger" />
+
+                <EditText
+                    android:id="@+id/input_old"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:hint="@string/all_old_password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/text_larger" />
+
+                <EditText
+                    android:id="@+id/input_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:hint="@string/all_new_password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/text_larger" />
+
+                <EditText
+                    android:id="@+id/input_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:hint="@string/all_confirm_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/text_larger" />
+
+                <CheckBox
+                    android:id="@+id/check_show_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="@string/all_show_password"
+                    android:textSize="@dimen/text_larger" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="@string/all_save" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/include_progress" />
+    </com.rainmachine.presentation.screens.wizarddevicename.WizardDeviceNameView>
+</LinearLayout>

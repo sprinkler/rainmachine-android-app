@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_medium">
+
+    <TextView
+        android:id="@+id/tv_summer_time_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingTop="@dimen/spacing_large"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_large"
+        tools:text="@string/zone_details_summer_time_desc" />
+</LinearLayout>

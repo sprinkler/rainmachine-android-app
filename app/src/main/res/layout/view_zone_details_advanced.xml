@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainmachine.presentation.screens.zonedetails.ZoneDetailsAdvancedView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/spacing_large">
+
+            <TextView
+                style="@style/SectionHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_details_advanced" />
+
+            <LinearLayout
+                android:id="@+id/view_advanced_part1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/include_divider" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/view_field_capacity"
+                    style="@style/CardViewZoneStyle.SingleLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_zone_details"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/zone_details_field_capacity"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_field_capacity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_watering"
+                                android:textSize="@dimen/text_larger"
+                                tools:text="0.74 in" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_action_next_item" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <include layout="@layout/include_divider" />
+
+                <include
+                    layout="@layout/include_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/spacing_large" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/view_soil_type"
+                    style="@style/CardViewZoneStyle.SingleLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/zone_details_soil_type"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_soil_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/spacing_medium"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/text_larger" />
+
+                            <ImageView
+                                android:id="@+id/img_soil_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_keyboard_arrow_down" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_soil_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_zone_details"
+                    android:paddingTop="@dimen/spacing_medium"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <include layout="@layout/include_divider" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/view_slope"
+                    style="@style/CardViewZoneStyle.SingleLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/zone_details_slope"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_slope"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/spacing_medium"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/text_larger" />
+
+                            <ImageView
+                                android:id="@+id/img_slope"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_keyboard_arrow_down" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_slope"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_zone_details"
+                    android:paddingTop="@dimen/spacing_medium"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <include layout="@layout/include_divider" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/view_vegetation_type"
+                style="@style/CardViewZoneStyle.SingleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/zone_details_vegetation_type"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_vegetation_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/spacing_medium"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/text_larger" />
+
+                        <ImageView
+                            android:id="@+id/img_vegetation_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_keyboard_arrow_down" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_vegetation_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_zone_details"
+                android:paddingTop="@dimen/spacing_medium"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+            <include layout="@layout/include_divider" />
+
+            <LinearLayout
+                android:id="@+id/view_advanced_part2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/view_sprinkler_heads"
+                    style="@style/CardViewZoneStyle.SingleLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/zone_details_sprinkler_heads"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_sprinkler_heads"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/spacing_medium"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/text_larger" />
+
+                            <ImageView
+                                android:id="@+id/img_sprinkler_heads"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_keyboard_arrow_down" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_sprinkler_heads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_zone_details"
+                    android:paddingTop="@dimen/spacing_medium"
+                    android:visibility="gone" />
+
+                <include layout="@layout/include_divider" />
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/view_exposure"
+                    style="@style/CardViewZoneStyle.SingleLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/zone_details_exposure"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_exposure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/spacing_medium"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/text_larger" />
+
+                            <ImageView
+                                android:id="@+id/img_exposure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_keyboard_arrow_down" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_zone_details"
+                    android:paddingTop="@dimen/spacing_medium"
+                    android:visibility="gone" />
+
+                <include layout="@layout/include_divider" />
+
+                <TextView
+                    style="@style/SectionHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zone_details_flow_rate_reporting" />
+
+                <include layout="@layout/include_divider" />
+
+                <android.support.v7.widget.CardView
+                    style="@style/CardViewZoneStyle.SingleLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/zone_details_area"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_units_area"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/text_larger"
+                                tools:text="@string/zone_details_area_units_square_foot" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/zone_details_area_optional"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/text_larger" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/input_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:minEms="4"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <include layout="@layout/include_divider" />
+
+                <android.support.v7.widget.CardView
+                    style="@style/CardViewZoneStyle.SingleLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/zone_details_total_flow"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_units_flow_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/text_larger"
+                                tools:text="@string/zone_details_flow_rate_units_cubic_metre_hour" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/zone_details_total_flow_optional"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/text_larger" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/input_flow_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:minEms="4"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <include layout="@layout/include_divider" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/zone_details_flow_rate_note"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_zone_details_slope" />
+
+    <include layout="@layout/view_zone_details_soil" />
+
+    <include layout="@layout/view_zone_details_sprinkler_head" />
+
+    <include layout="@layout/view_zone_details_vegetation" />
+
+    <include layout="@layout/view_zone_details_vegetation_monthly" />
+</com.rainmachine.presentation.screens.zonedetails.ZoneDetailsAdvancedView>

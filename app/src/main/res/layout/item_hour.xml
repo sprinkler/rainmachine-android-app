@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainmachine.presentation.widgets.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/row_background"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/min_height_row_two_lines"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/spacing_medium"
+    android:paddingLeft="@dimen/activity_horizontal_padding"
+    android:paddingRight="@dimen/activity_horizontal_padding"
+    android:paddingTop="@dimen/spacing_medium">
+
+    <TextView
+        android:id="@+id/frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_red"
+        android:textSize="@dimen/text_larger" />
+
+    <TextView
+        android:id="@+id/interval"
+        fontPath="fonts/Roboto-Light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_red"
+        android:textSize="@dimen/text_medium"
+        tools:ignore="MissingPrefix" />
+</com.rainmachine.presentation.widgets.CheckableLinearLayout>

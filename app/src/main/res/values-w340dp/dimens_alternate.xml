@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cycle & soak dialog -->
+    <dimen name="padding_cycle_soak">8dp</dimen>
+    <dimen name="text_cycle_soak">18sp</dimen>
+</resources>

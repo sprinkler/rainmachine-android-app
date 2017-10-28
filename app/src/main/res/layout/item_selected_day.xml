@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainmachine.presentation.widgets.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="?attr/listPreferredItemHeightSmall"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <CheckBox
+        android:id="@+id/day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:ellipsize="marquee"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?attr/textColorAlertDialogListItem"
+        tools:text="Monday" />
+
+    <TextView
+        android:id="@+id/tv_covers_num_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_medium"
+        tools:text="covers 5 days" />
+</com.rainmachine.presentation.widgets.CheckableLinearLayout>

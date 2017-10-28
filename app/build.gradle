@@ -1,0 +1,281 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.23.0'
+        classpath 'com.google.gms:google-services:3.0.0'
+    }
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://clojars.org/repo/" }
+    maven { url "https://jitpack.io" }
+    mavenCentral()
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'io.fabric'
+
+def buildTime = new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+
+def gcmSenderId
+def cloudValidateApiKey
+def cloudSprinklersLiveUrl
+def cloudValidateLiveUrl
+def cloudPushLiveUrl
+def cloudSprinklersDevUrl
+def cloudValidateDevUrl
+def cloudPushDevUrl
+def cloudSprinklersMiniBoxUrl
+def cloudValidateMiniBoxUrl
+def cloudPushMiniBoxUrl
+def cloudSprinklersNewDevUrl
+def cloudValidateNewDevUrl
+def cloudPushNewDevUrl
+def cloudSprinklersTestUrl
+def cloudValidateTestUrl
+def cloudPushTestUrl
+def firebaseEmail
+def firebasePassword
+def firebaseUrl
+try {
+    def propsConfig = new Properties()
+    propsConfig.load(new FileInputStream(project.file('config.properties')))
+    gcmSenderId = propsConfig['GCM_SENDER_ID']
+    cloudValidateApiKey = propsConfig['CLOUD_VALIDATE_API_KEY']
+    cloudSprinklersLiveUrl = propsConfig['CLOUD_SPRINKLERS_LIVE_URL']
+    cloudValidateLiveUrl = propsConfig['CLOUD_VALIDATE_LIVE_URL']
+    cloudPushLiveUrl = propsConfig['CLOUD_PUSH_LIVE_URL']
+    cloudSprinklersDevUrl = propsConfig['CLOUD_SPRINKLERS_DEV_URL']
+    cloudValidateDevUrl = propsConfig['CLOUD_VALIDATE_DEV_URL']
+    cloudPushDevUrl = propsConfig['CLOUD_PUSH_DEV_URL']
+    cloudSprinklersMiniBoxUrl = propsConfig['CLOUD_SPRINKLERS_MINI_BOX_URL']
+    cloudValidateMiniBoxUrl = propsConfig['CLOUD_VALIDATE_MINI_BOX_URL']
+    cloudPushMiniBoxUrl = propsConfig['CLOUD_PUSH_MINI_BOX_URL']
+    cloudSprinklersNewDevUrl = propsConfig['CLOUD_SPRINKLERS_NEW_DEV_URL']
+    cloudValidateNewDevUrl = propsConfig['CLOUD_VALIDATE_NEW_DEV_URL']
+    cloudPushNewDevUrl = propsConfig['CLOUD_PUSH_NEW_DEV_URL']
+    cloudSprinklersTestUrl = propsConfig['CLOUD_SPRINKLERS_TEST_URL']
+    cloudValidateTestUrl = propsConfig['CLOUD_VALIDATE_TEST_URL']
+    cloudPushTestUrl = propsConfig['CLOUD_PUSH_TEST_URL']
+    firebaseEmail = propsConfig['FIREBASE_EMAIL']
+    firebasePassword = propsConfig['FIREBASE_PASSWORD']
+    firebaseUrl = propsConfig['FIREBASE_URL']
+} catch (ignored) {
+    throw new InvalidPropertiesFormatException("You should define all the sensitive data in a file called config.properties. Check out app/build.gradle for the exact data needed.")
+}
+
+def versionMajor = 4
+def versionMinor = 2
+def versionPatch = 5
+
+android {
+    compileSdkVersion parent.ext.compileSdkVersion
+    buildToolsVersion parent.ext.buildToolsVersion
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    defaultConfig {
+        applicationId "com.rainmachine"
+        minSdkVersion parent.ext.minSdkVersion
+        targetSdkVersion parent.ext.targetSdkVersion
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+
+        vectorDrawables.useSupportLibrary = false
+
+        buildConfigField "String", "GCM_SENDER_ID", "\"${gcmSenderId}\""
+        buildConfigField "String", "CLOUD_VALIDATE_API_KEY", "\"${cloudValidateApiKey}\""
+        buildConfigField "String", "CLOUD_SPRINKLERS_LIVE_URL", "\"${cloudSprinklersLiveUrl}\""
+        buildConfigField "String", "CLOUD_VALIDATE_LIVE_URL", "\"${cloudValidateLiveUrl}\""
+        buildConfigField "String", "CLOUD_PUSH_LIVE_URL", "\"${cloudPushLiveUrl}\""
+        buildConfigField "String", "CLOUD_SPRINKLERS_DEV_URL", "\"${cloudSprinklersDevUrl}\""
+        buildConfigField "String", "CLOUD_VALIDATE_DEV_URL", "\"${cloudValidateDevUrl}\""
+        buildConfigField "String", "CLOUD_PUSH_DEV_URL", "\"${cloudPushDevUrl}\""
+        buildConfigField "String", "CLOUD_SPRINKLERS_MINI_BOX_URL", "\"${cloudSprinklersMiniBoxUrl}\""
+        buildConfigField "String", "CLOUD_VALIDATE_MINI_BOX_URL", "\"${cloudValidateMiniBoxUrl}\""
+        buildConfigField "String", "CLOUD_PUSH_MINI_BOX_URL", "\"${cloudPushMiniBoxUrl}\""
+        buildConfigField "String", "CLOUD_SPRINKLERS_NEW_DEV_URL", "\"${cloudSprinklersNewDevUrl}\""
+        buildConfigField "String", "CLOUD_VALIDATE_NEW_DEV_URL", "\"${cloudValidateNewDevUrl}\""
+        buildConfigField "String", "CLOUD_PUSH_NEW_DEV_URL", "\"${cloudPushNewDevUrl}\""
+        buildConfigField "String", "CLOUD_SPRINKLERS_TEST_URL", "\"${cloudSprinklersTestUrl}\""
+        buildConfigField "String", "CLOUD_VALIDATE_TEST_URL", "\"${cloudValidateTestUrl}\""
+        buildConfigField "String", "CLOUD_PUSH_TEST_URL", "\"${cloudPushTestUrl}\""
+        buildConfigField "String", "FIREBASE_EMAIL", "\"${firebaseEmail}\""
+        buildConfigField "String", "FIREBASE_PASSWORD", "\"${firebasePassword}\""
+        buildConfigField "String", "FIREBASE_URL", "\"${firebaseUrl}\""
+
+        testApplicationId "com.rainmachine.test"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {}
+    }
+    final PROVIDER_RELEASE = "com.rainmachine.provider"
+    final PROVIDER_FILE_RELEASE = "com.rainmachine.fileprovider"
+    final PROVIDER_DEBUG = "com.rainmachine.provider.debug"
+    final PROVIDER_FILE_DEBUG = "com.rainmachine.fileprovider.debug"
+    final PROVIDER_AUTHORITY = "PROVIDER_AUTHORITY"
+    final PROVIDER_FILE_AUTHORITY = "PROVIDER_FILE_AUTHORITY"
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+            buildConfigField "String", PROVIDER_AUTHORITY, "\"" + PROVIDER_RELEASE + "\""
+            buildConfigField "String", PROVIDER_FILE_AUTHORITY, "\"" + PROVIDER_FILE_RELEASE + "\""
+            manifestPlaceholders = [providerAuthority: PROVIDER_RELEASE, providerFileAuthority: PROVIDER_FILE_RELEASE]
+        }
+        debug {
+            applicationIdSuffix ".dev"
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            versionNameSuffix "-dev-" + buildTime
+            buildConfigField "String", PROVIDER_AUTHORITY, "\"" + PROVIDER_DEBUG + "\""
+            buildConfigField "String", PROVIDER_FILE_AUTHORITY, "\"" + PROVIDER_FILE_DEBUG + "\""
+            manifestPlaceholders = [providerAuthority: PROVIDER_DEBUG, providerFileAuthority: PROVIDER_FILE_DEBUG]
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'LICENSE.txt'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+        lintConfig file("./lint.xml")
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "RainMachine-${variant.versionName}.apk"
+        }
+    }
+}
+
+afterEvaluate {
+    def configName = 'release'
+    if (android.signingConfigs.hasProperty(configName)) {
+        try {
+            def props = new Properties()
+            props.load(new FileInputStream(project.file('keystore.properties')))
+            android.signingConfigs[configName].storeFile = project.file(props['STORE_FILE'])
+            android.signingConfigs[configName].storePassword = props['STORE_PASSWORD']
+            android.signingConfigs[configName].keyAlias = props['KEY_ALIAS']
+            android.signingConfigs[configName].keyPassword = props['KEY_PASSWORD']
+        } catch (ignored) {
+            throw new InvalidPropertiesFormatException("You should define the release keystore data in a file called keystore.properties. Check out app/build.gradle for the exact data needed.")
+        }
+    }
+}
+
+dependencies {
+    final SUPPORT_LIBRARY_VERSION = '25.3.1'
+    final PLAY_SERVICES_VERSION = '10.2.6'
+    final BUTTER_KNIFE_VERSION = '8.5.1'
+    final PARCELER_VERSION = '1.1.9'
+    final RETROFIT_VERSION = '2.2.0'
+    final OKHTTP_VERSION = '3.6.0'
+    final LEAK_CANARY_VERSION = '1.5.1'
+    final DAGGER_VERSION = '1.2.5'
+    final DEBUG_DRAWER = '0.7.0'
+    final EPOXY_VERSION = '2.5.1'
+
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile project(':domain')
+    compile project(':NumberPicker')
+    compile project(':MPChartLib')
+
+    compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
+
+    compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
+    compile "com.android.support:recyclerview-v7:$SUPPORT_LIBRARY_VERSION"
+    compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
+    compile "com.android.support:gridlayout-v7:$SUPPORT_LIBRARY_VERSION"
+
+    compile "com.google.android.gms:play-services-maps:$PLAY_SERVICES_VERSION"
+    compile "com.google.android.gms:play-services-location:$PLAY_SERVICES_VERSION"
+    compile "com.google.android.gms:play-services-gcm:$PLAY_SERVICES_VERSION"
+
+    compile "com.google.firebase:firebase-core:$PLAY_SERVICES_VERSION"
+    compile "com.google.firebase:firebase-storage:$PLAY_SERVICES_VERSION"
+    compile "com.google.firebase:firebase-auth:$PLAY_SERVICES_VERSION"
+    compile "com.google.firebase:firebase-database:$PLAY_SERVICES_VERSION"
+
+    compile "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    compile "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+    compile "com.squareup.retrofit2:adapter-rxjava2:$RETROFIT_VERSION"
+    compile "com.squareup.okhttp3:okhttp:$OKHTTP_VERSION"
+    compile "com.squareup.okhttp3:logging-interceptor:$OKHTTP_VERSION"
+    compile 'com.squareup:otto:1.3.8'
+    compile "com.squareup.dagger:dagger:$DAGGER_VERSION"
+    kapt "com.squareup.dagger:dagger-compiler:$DAGGER_VERSION"
+    compile "com.jakewharton:butterknife:$BUTTER_KNIFE_VERSION"
+    kapt "com.jakewharton:butterknife-compiler:$BUTTER_KNIFE_VERSION"
+    compile 'com.jakewharton.timber:timber:4.5.1'
+
+    compile 'net.danlew:android.joda:2.9.9'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'nl.qbusict:cupboard:2.2.0'
+    compile 'nl.2312:rxcupboard2:2.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.7@aar') {
+        transitive = true;
+    }
+    compile "org.parceler:parceler-api:$PARCELER_VERSION"
+    kapt "org.parceler:parceler:$PARCELER_VERSION"
+
+    compile 'io.reactivex.rxjava2:rxjava:2.1.2'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    compile 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
+    compile 'com.github.pakoito:RxTuples2:1.0.0'
+    compile "com.airbnb.android:epoxy:$EPOXY_VERSION"
+    kapt "com.airbnb.android:epoxy-processor:$EPOXY_VERSION"
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+
+    compile 'frankiesardo:icepick:3.2.0'
+    kapt 'frankiesardo:icepick-processor:3.2.0'
+
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'com.github.jkwiecien:EasyImage:1.2.3'
+    compile 'com.github.frangsierra:rx2firebase:1.1.3'
+
+    compile 'com.isseiaoki:simplecropview:1.1.4'
+    compile 'com.shawnlin:number-picker:2.4.4'
+
+    compile "io.palaima.debugdrawer:debugdrawer:$DEBUG_DRAWER"
+    compile "io.palaima.debugdrawer:debugdrawer-commons:$DEBUG_DRAWER"
+    compile "io.palaima.debugdrawer:debugdrawer-actions:$DEBUG_DRAWER"
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$KOTLIN_VERSION"
+
+    // Debug only dependencies
+    debugCompile 'com.amitshekhar.android:debug-db:1.0.1'
+    debugCompile "com.squareup.leakcanary:leakcanary-android:$LEAK_CANARY_VERSION"
+    releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:$LEAK_CANARY_VERSION"
+
+    // Unit testing dependencies.
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+    testCompile 'org.hamcrest:hamcrest-all:1.3'
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainmachine.presentation.widgets.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/row_background"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/min_height_row_one_line"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_padding"
+    android:paddingRight="@dimen/activity_horizontal_padding">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/text_larger"
+        tools:text="Airport1 (7.43 mi)" />
+</com.rainmachine.presentation.widgets.CheckableLinearLayout>

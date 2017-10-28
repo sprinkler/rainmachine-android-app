@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_watering_live"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_watering_live"
+    android:minHeight="@dimen/min_height_row_two_lines"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:layout_toLeftOf="@+id/flipper_special_timer">
+
+        <ImageView
+            android:id="@+id/icon_watering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_padding"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_watering_scheduled" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_toRightOf="@+id/icon_watering"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_watering_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_larger"
+                tools:text="Zone 2" />
+
+            <TextView
+                android:id="@+id/tv_watering_info_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_live_watering_subtitle"
+                android:textSize="@dimen/text_larger"
+                tools:text="cycle 1/2, Program 1" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ViewFlipper
+        android:id="@+id/flipper_special_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/activity_horizontal_padding">
+
+        <com.rainmachine.presentation.widgets.MaterialProgressBar
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical|right" />
+
+        <TextView
+            android:id="@+id/tv_special_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_xxlarge"
+            tools:text="02:36" />
+    </ViewFlipper>
+</RelativeLayout>

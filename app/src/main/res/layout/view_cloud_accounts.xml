@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainmachine.presentation.screens.cloudaccounts.CloudAccountsView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ScreenMargins"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:listSelector="@color/transparent"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_padding"
+            android:layout_marginRight="@dimen/activity_horizontal_padding"
+            android:gravity="start"
+            android:lineSpacingMultiplier="1.0"
+            android:paddingBottom="@dimen/spacing_medium"
+            android:paddingTop="@dimen/spacing_medium"
+            android:text="@string/cloud_accounts_help"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_medium" />
+
+        <include layout="@layout/include_line_separator" />
+
+        <Button
+            android:id="@+id/btn_add_cloud_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_padding"
+            android:layout_marginLeft="@dimen/activity_horizontal_padding"
+            android:layout_marginRight="@dimen/activity_horizontal_padding"
+            android:layout_marginTop="@dimen/activity_vertical_padding"
+            android:text="@string/cloud_accounts_add_account" />
+    </LinearLayout>
+
+    <include layout="@layout/include_progress" />
+</com.rainmachine.presentation.screens.cloudaccounts.CloudAccountsView>

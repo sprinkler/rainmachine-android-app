@@ -1,0 +1,282 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.rainsensor.RainSensorActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.rainsensor.RainSensorView
+        android:id="@+id/view_rain_sensor"
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_padding">
+
+                    <TextView
+                        style="@style/SectionHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rain_sensor_options" />
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/view_rain_sensor_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_item"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/min_height_row_two_lines"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/activity_horizontal_padding"
+                        android:paddingRight="@dimen/activity_horizontal_padding">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingRight="@dimen/spacing_medium">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rain_sensor_active"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rain_sensor_hardware_subtitle"
+                                android:textSize="@dimen/text_medium"
+                                tools:ignore="MissingPrefix" />
+                        </LinearLayout>
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/toggle_rain_sensor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/spacing_medium"
+                            android:paddingLeft="@dimen/spacing_medium"
+                            android:paddingRight="@dimen/spacing_medium"
+                            android:paddingTop="@dimen/spacing_medium" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/view_rain_detected_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/view_rain_detected"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_item"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:minHeight="@dimen/min_height_row_two_lines"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/activity_horizontal_padding"
+                                android:paddingRight="@dimen/activity_horizontal_padding"
+                                android:text="@string/rain_sensor_while_detected"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_rain_option"
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/activity_horizontal_padding"
+                                android:paddingRight="@dimen/activity_horizontal_padding"
+                                android:textSize="@dimen/text_medium"
+                                tools:ignore="MissingPrefix" />
+                        </LinearLayout>
+
+                        <include layout="@layout/include_divider" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_last_rain_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SectionHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rain_sensor_last_rain_event" />
+
+                        <include layout="@layout/include_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_item"
+                            android:gravity="center_vertical"
+                            android:minHeight="@dimen/min_height_row_two_lines"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_last_rain_event"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/activity_horizontal_padding"
+                                android:paddingRight="@dimen/activity_horizontal_padding"
+                                android:textSize="@dimen/text_larger"
+                                tools:ignore="MissingPrefix"
+                                tools:text="Friday, APR 7, 06:45" />
+                        </LinearLayout>
+
+                        <include layout="@layout/include_divider" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_rain_sensor_closed_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SectionHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rain_sensor_rain_sensor_type" />
+
+                        <include layout="@layout/include_divider" />
+
+                        <LinearLayout
+                            android:id="@+id/view_rain_sensor_closed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_item"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:minHeight="@dimen/min_height_row_two_lines"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/activity_horizontal_padding"
+                            android:paddingRight="@dimen/activity_horizontal_padding">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:paddingRight="@dimen/spacing_medium">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/rain_sensor_closed"
+                                    android:textSize="@dimen/text_larger" />
+
+                                <TextView
+                                    fontPath="fonts/Roboto-Light.ttf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/rain_sensor_closed_subtitle"
+                                    android:textSize="@dimen/text_medium"
+                                    tools:ignore="MissingPrefix" />
+                            </LinearLayout>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/toggle_rain_sensor_closed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/spacing_medium"
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium"
+                                android:paddingTop="@dimen/spacing_medium" />
+                        </LinearLayout>
+
+                        <include layout="@layout/include_divider" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/view_help"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/selector_item"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/include_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="@dimen/min_height_row_two_lines"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/activity_horizontal_padding"
+                                android:paddingRight="@dimen/activity_horizontal_padding"
+                                android:text="@string/all_help"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/activity_horizontal_padding"
+                                android:paddingRight="@dimen/activity_horizontal_padding"
+                                android:text="@string/rain_sensor_connect"
+                                android:textSize="@dimen/text_medium"
+                                tools:ignore="MissingPrefix" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/include_divider" />
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_rain_detected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/red"
+                android:gravity="center"
+                android:minHeight="@dimen/min_height_row_two_lines"
+                android:text="@string/rain_sensor_rain_detected"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_larger"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <include layout="@layout/include_progress" />
+
+        <include layout="@layout/include_error" />
+    </com.rainmachine.presentation.screens.rainsensor.RainSensorView>
+</LinearLayout>

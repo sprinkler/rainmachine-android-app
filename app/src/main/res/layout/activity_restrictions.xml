@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.restrictions.RestrictionsActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.rainmachine.presentation.screens.restrictions.RestrictionsView
+        style="@style/ScreenMargins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SectionHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all_restrictions" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="?android:attr/listDivider"
+                    android:orientation="vertical"
+                    android:showDividers="beginning|middle|end">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/min_height_row_two_lines"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/view_hot_days"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/spacing_medium"
+                            android:paddingLeft="@dimen/activity_horizontal_padding"
+                            android:paddingRight="@dimen/activity_horizontal_padding"
+                            android:paddingTop="@dimen/spacing_medium">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/restrictions_hot_days"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_hot_days"
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/restrictions_allow_extra_watering"
+                                android:textSize="@dimen/text_medium"
+                                tools:ignore="MissingPrefix" />
+                        </LinearLayout>
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/toggle_hot_days"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/spacing_medium"
+                            android:paddingLeft="@dimen/activity_horizontal_padding"
+                            android:paddingRight="@dimen/activity_horizontal_padding"
+                            android:paddingTop="@dimen/spacing_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/min_height_row_two_lines"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/view_freeze_protect"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/spacing_medium"
+                            android:paddingLeft="@dimen/activity_horizontal_padding"
+                            android:paddingRight="@dimen/activity_horizontal_padding"
+                            android:paddingTop="@dimen/spacing_medium">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/all_freeze_protect"
+                                android:textSize="@dimen/text_larger" />
+
+                            <TextView
+                                android:id="@+id/tv_freeze_protect"
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text_medium"
+                                tools:ignore="MissingPrefix" />
+                        </LinearLayout>
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/toggle_freeze_protect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/spacing_medium"
+                            android:paddingLeft="@dimen/activity_horizontal_padding"
+                            android:paddingRight="@dimen/activity_horizontal_padding"
+                            android:paddingTop="@dimen/spacing_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_months"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:minHeight="@dimen/min_height_row_two_lines"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/spacing_medium"
+                        android:paddingLeft="@dimen/activity_horizontal_padding"
+                        android:paddingRight="@dimen/activity_horizontal_padding"
+                        android:paddingTop="@dimen/spacing_medium">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all_months"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_months"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_red"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_weekdays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:minHeight="@dimen/min_height_row_two_lines"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/spacing_medium"
+                        android:paddingLeft="@dimen/activity_horizontal_padding"
+                        android:paddingRight="@dimen/activity_horizontal_padding"
+                        android:paddingTop="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/restrictions_week_days"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_weekdays"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_red"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_hours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:minHeight="@dimen/min_height_row_two_lines"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/spacing_medium"
+                        android:paddingLeft="@dimen/activity_horizontal_padding"
+                        android:paddingRight="@dimen/activity_horizontal_padding"
+                        android:paddingTop="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all_hours_title"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_hours"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/text_red"
+                            android:textSize="@dimen/text_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_duration_threshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/min_height_row_two_lines"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/spacing_medium"
+                        android:paddingLeft="@dimen/activity_horizontal_padding"
+                        android:paddingRight="@dimen/activity_horizontal_padding"
+                        android:paddingTop="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingRight="@dimen/spacing_medium"
+                            android:text="@string/restrictions_duration_threshold"
+                            android:textSize="@dimen/text_larger" />
+
+                        <TextView
+                            android:id="@+id/tv_duration_threshold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_larger"
+                            tools:text="30 seconds" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/include_progress" />
+
+        <include layout="@layout/include_error" />
+    </com.rainmachine.presentation.screens.restrictions.RestrictionsView>
+</LinearLayout>

@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en">
+
+    <!-- About screen-->
+    <string name="about_update_progress">Updating RainMachine firmware…\nDo not unplug RainMachine!</string>
+    <string name="about_app_version">Android app</string>
+    <string name="about_rain_machine_version">RainMachine firmware</string>
+    <string name="about_hardware_version">Hardware</string>
+    <string name="about_version_update">v%1$s (new: v%2$s)</string>
+    <string name="about_api_version">API</string>
+    <string name="about_ip_address">IP address</string>
+    <string name="about_netmask">Netmask</string>
+    <string name="about_gateway">Gateway</string>
+    <string name="about_mac_address">MAC address</string>
+    <string name="about_ssid_name">WiFi SSID</string>
+    <string name="about_mem_usage">Memory usage</string>
+    <string name="about_kb">%1$d KB</string>
+    <string name="about_cpu_usage">CPU usage</string>
+    <string name="about_uptime">Uptime</string>
+    <string name="about_none_lower_case">none</string>
+    <string name="about_send_diagnostics">Send Diagnostics</string>
+    <string name="about_error_send_diagnostics">Error sending the diagnostics</string>
+    <string name="about_success_send_diagnostics">Success sending the diagnostics</string>
+    <string name="about_remote_access_status">Remote access status</string>
+    <string name="about_rainmachine_online">RainMachine is online</string>
+    <string name="about_remote_access_disabled">disabled</string>
+    <string name="about_rainmachine_offline">RainMachine is offline (error code %1$d)</string>
+    <string name="about_are_you_sure_reset_cloud_certificates">Are you sure you want to reset the remote access functionality?</string>
+    <string name="about_success_reset_cloud_certificates">Successfully reset remote access functionality</string>
+    <string name="about_error_reset_cloud_certificates">Failure resetting remote access functionality</string>
+
+    <!-- Current Restrictions screen-->
+    <string name="current_restrictions_rain_detected">Rain detected</string>
+    <string name="current_restrictions_paused">Paused</string>
+    <string name="current_restrictions_for_resume">&#160;and will resume normal operation after the rain has stopped</string>
+    <string name="current_restrictions_for_one_day">&#160;and will resume after midnight if the rain has stopped by then</string>
+    <string name="current_restrictions_for_6">&#160;and will resume after 6 hours since the rain has stopped</string>
+    <string name="current_restrictions_for_12">&#160;and will resume after 12 hours since the rain has stopped</string>
+    <string name="current_restrictions_for_24">&#160;and will resume after 24 hours since the rain has stopped</string>
+    <string name="current_restrictions_for_48">&#160;and will resume after 48 hours since the rain has stopped</string>
+    <string name="current_restrictions_for_x_minutes">&#160;for %1$d minutes</string>
+    <string name="current_restrictions_freeze_protect_under">Freeze protect under %1$d%2$s</string>
+    <string name="current_restrictions_month_day">%1$s restriction</string>
+    <string name="current_restrictions_hourly_from_to">Hourly from %1$s to %2$s</string>
+    <string name="current_restrictions_hourly">hourly</string>
+    <string name="current_restrictions_subtitle">Current restrictions</string>
+    <string name="current_restrictions_rainmachine_is">RainMachine is&#160;</string>
+
+    <!-- Advanced Settings screen -->
+    <string name="advanced_settings_ssh_access">SSH Access</string>
+    <string name="advanced_settings_beta_updates">Beta Quality Updates</string>
+    <string name="advanced_settings_amazon_alexa">Amazon Echo Alexa Integration</string>
+    <string name="advanced_settings_amazon_alexa_subtitle">Allow local LAN integration with Amazon Alexa.</string>
+    <string name="advanced_settings_beta_updates_subtitle">Allow to receive beta updates which are more often, but not thoroughly tested (use this at your own risk).</string>
+    <string name="advanced_settings_log_level">Log Level</string>
+    <string name="advanced_settings_log_debug">Debug</string>
+    <string name="advanced_settings_log_normal">Normal</string>
+    <string name="advanced_settings_log_warnings">Only Warnings / Errors</string>
+    <string name="advanced_settings_bonjour_service">Bonjour Service</string>
+    <string name="advanced_settings_bonjour_subtitle">Allow mDNS discovery</string>
+    <string name="advanced_settings_left_hand">Left Hand</string>
+    <string name="advanced_settings_right_hand">Right Hand</string>
+
+    <!-- Cloud Accounts screen-->
+    <string name="cloud_accounts_account">Account</string>
+    <string name="cloud_accounts_are_you_sure_delete_cloud">Are you sure you want to delete this account?</string>
+    <string name="cloud_accounts_error_email_invalid">Invalid email</string>
+    <string name="cloud_accounts_add_account">Add account</string>
+    <string name="cloud_accounts_email">E-mail address</string>
+    <string name="cloud_accounts_rain_machine_password">RainMachine password</string>
+    <string name="cloud_accounts_added">Successfully added account</string>
+    <string name="cloud_accounts_updated">Successfully updated account</string>
+    <string name="cloud_accounts_error">Error</string>
+    <string name="cloud_accounts_duplicate_email">This email already exists in your account list.</string>
+    <string name="cloud_accounts_no_devices">Could not find any RainMachine devices associated to %1$s. Check that the email address is correct, and that the verification email has been confirmed.</string>
+    <string name="cloud_accounts_not_connected">The RainMachine associated to %1$s is not connected to the Internet.</string>
+    <string name="cloud_accounts_invalid_password">Invalid password, please try again.</string>
+    <string name="cloud_accounts_server_problem">There was a network problem. Make sure you have Internet connectivity.</string>
+    <string name="cloud_accounts_help">This information is necessary for remotely accessing your RainMachine.</string>
+
+    <!-- Crop screen -->
+    <string name="crop_title">Crop image</string>
+
+    <!-- Devices screen-->
+    <string name="devices_no_rain_machines_found">No RainMachines found.</string>
+    <string name="devices_setup">setup</string>
+    <string name="devices_offline">offline</string>
+    <string name="devices_remote_access">Remote Access</string>
+
+    <!-- Direct Access screen-->
+    <string name="direct_access_device">Device</string>
+    <string name="direct_access_are_you_sure_delete_manual_device">Are you sure you want to delete this device?</string>
+    <string name="direct_access_url_example">Example: 1.1.1.200:443</string>
+    <string name="direct_access_name">Name</string>
+    <string name="direct_access_url_or_ip">URL or IP address</string>
+    <string name="direct_access_device_added">Successfully added manual device</string>
+    <string name="direct_access_add_device">Add device</string>
+    <string name="direct_access_help">Optional: Needed only for advanced networking configurations.\nThis option is not needed for configuring remote access.</string>
+
+    <!-- Drawer screen-->
+    <string name="drawer_view_all_devices">View all devices</string>
+    <string name="drawer_open">open drawer</string>
+    <string name="drawer_close">close drawer</string>
+
+    <!-- Help screen -->
+    <string name="help_software_updates">Software Updates</string>
+    <string name="help_online_manuals">Online Manuals</string>
+    <string name="help_contact">Contact</string>
+    <string name="help_using_the_app">Using the App</string>
+    <string name="help_forums">Forums</string>
+
+    <!-- Hidden drawer -->
+    <string name="hidden_drawer_logs">Logs</string>
+    <string name="hidden_drawer_show_logs">Show logs</string>
+    <string name="hidden_drawer_cloud">Cloud</string>
+    <string name="hidden_drawer_device_cache">Device cache</string>
+    <string name="hidden_drawer_sprinkler">Sprinkler</string>
+    <string name="hidden_drawer_spk2_behavior">SPK2 behavior</string>
+    <string name="hidden_drawer_spk1_api">SPK1 3.72 API</string>
+    <string name="hidden_drawer_push">Push</string>
+    <string name="hidden_drawer_notification">Notification</string>
+    <string name="hidden_drawer_send_push">Send push</string>
+    <string name="hidden_drawer_scan">Scan</string>
+    <string name="hidden_drawer_urls">URLs</string>
+    <string name="hidden_drawer_logging">Logging</string>
+    <string name="hidden_drawer_add">Add</string>
+    <string name="hidden_drawer_edit">Edit</string>
+    <string name="hidden_drawer_add_cloud_servers">Add cloud servers</string>
+    <string name="hidden_drawer_edit_cloud_servers">Edit cloud servers</string>
+    <string name="hidden_drawer_label">Label</string>
+    <string name="hidden_drawer_proxy">Proxy</string>
+    <string name="hidden_drawer_validator">Validator</string>
+
+    <!-- Hours screen-->
+    <string name="hours_help">Do not water on specified hours.\nPrograms will be paused during restricted hours and will be resumed after restriction.</string>
+    <string name="hours_add_restriction">Add New Restriction</string>
+    <string name="hours_select_restrictions">Delete restrictions</string>
+    <plurals name="hours_restrictions_deleted">
+        <item quantity="one">1 restriction deleted</item>
+        <item quantity="other">%1$d restrictions deleted</item>
+    </plurals>
+    <plurals name="hours_restrictions_selected">
+        <item quantity="one">%1$d selected</item>
+        <item quantity="other">%1$d selected</item>
+    </plurals>
+
+    <!-- Location screen-->
+    <string name="location_edit">Edit</string>
+    <string name="location_success_set">Successfully saved location</string>
+    <string name="location_error_set">Unable to save location</string>
+    <string name="location_enter_address_manually">Enter address manually</string>
+    <string name="location_enter_address">Enter location address</string>
+    <string name="location_invalid">Invalid location</string>
+    <string name="location_getting_current">Getting current location…</string>
+    <string name="location_services_disabled">Location services are disabled on your device</string>
+    <string name="location_not_found">Unable to find location using the current location settings on your device</string>
+    <string name="location_could_not_retrieve_coordinates">Could not retrieve map coordinates for the address</string>
+    <string name="location_enable_services">Turn on location services</string>
+    <string name="location_update_settings">Update device location settings</string>
+    <string name="location_map_address_not_found">Not found</string>
+    <string name="location_skip_description">You would not be able to download weather data.</string>
+    <string name="location_set">Set RainMachine location</string>
+
+    <!-- Location Settings screen-->
+    <string name="location_settings_change">Change location</string>
+    <string name="location_settings_subtitle">RainMachine location</string>
+
+    <!-- Login screen-->
+    <string name="login_title">Login</string>
+    <string name="login_username">User Name</string>
+    <string name="login_remember_me">Remember me</string>
+    <string name="login_error_authentication">Authentication failed</string>
+    <string name="login_error_network">Could not connect to the device %1$s</string>
+
+    <!-- Main screen-->
+    <string name="main_firmware_update">Firmware update available</string>
+    <string name="main_please_update">Please update your RainMachine device firmware to version %1$s</string>
+    <string name="main_please_update_latest">Please update your RainMachine device firmware to the latest version</string>
+    <string name="main_later">Later</string>
+    <string name="main_title_tab_stats">Stats</string>
+    <string name="main_update_progress">Updating the firmware of your RainMachine…\nDo not power it off while the update is in progress.</string>
+    <string name="main_sending_confirmation_email">Resending confirmation email…</string>
+    <string name="main_title_tab_water">Zones</string>
+    <string name="main_title_tab_settings">Settings</string>
+    <string name="main_programs">Programs</string>
+    <string name="main_rainmachine_paused">RainMachine is PAUSED!</string>
+    <string name="main_view_watering_restrictions">View current watering restrictions</string>
+    <string name="main_cloud_email_reminder">Email Reminder</string>
+    <string name="main_cloud_email_reminder_info">You have not verified your email. Please check %1$s for a confirmation email.</string>
+    <string name="main_set_up_email">Set up email</string>
+    <string name="main_remote_access_dialog_info">In order to remotely access your RainMachine, you need to provide a valid email.</string>
+    <string name="main_resend_confirmation">Resend confirmation</string>
+    <string name="main_success_setup">Congratulations! Your RainMachine is ready to use.</string>
+    <string name="main_program_name">program %1$s</string>
+    <string name="main_cycle">cycle %1$d/%2$d</string>
+    <string name="main_zone_name">Zone %1$s</string>
+    <string name="main_see_whats_new">See what\'s new</string>
+
+    <!-- Mini-8 Settings screen -->
+    <string name="mini8_settings_touch_advanced">Touch Advanced</string>
+    <string name="mini8_settings_touch_advanced_subtitle">Allow multiple zone queueing by pressing \"Start Water\" button.</string>
+    <string name="mini8_settings_max_led_brightness">Max LED Brightness</string>
+    <string name="mini8_settings_min_led_brightness">Min LED Brightness</string>
+    <string name="mini8_settings_brightness_interval">(0 to 255)</string>
+    <string name="mini8_settings_touch_sleep_timeout">Touch Sleep Timeout</string>
+    <string name="mini8_settings_touch_sleep_timeout_subtitle">Seconds of inactivity until touch display sleeps.</string>
+    <string name="mini8_settings_touch_long_press_timeout">Touch Long Press Timeout</string>
+    <string name="mini8_settings_touch_long_press_timeout_subtitle">Seconds to wait until the action executes automatically when a button is pressed.</string>
+    <string name="mini8_settings_led_delay">Light up \"DELAY\" LED</string>
+    <string name="mini8_settings_led_delay_subtitle">During the watering restrictions time intervals.</string>
+    <string name="mini8_settings_touch_start_program">Manually start a program</string>
+    <string name="mini8_settings_program_will_start">Program \"%1$s\" will start</string>
+    <string name="mini8_settings_touch_program_hint">Show P on digit display and enable to manually start selected program.</string>
+    <string name="mini8_settings_select_program">Select program</string>
+    <plurals name="mini8_settings_x_seconds">
+        <item quantity="one">1 second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+
+    <!-- Nearby Stations screen-->
+    <string name="nearby_stations_your_location">Your location</string>
+    <string name="nearby_stations_personal_weather_stations">Personal weather stations</string>
+    <string name="nearby_stations_airport_weather_stations">Airport weather stations</string>
+    <string name="nearby_stations_accurate_recommended">Accurate and recommended</string>
+    <string name="nearby_stations_use_only_reliable">Use only if reliable</string>
+    <string name="nearby_stations_error_save_weather_station">Error saving weather station</string>
+    <string name="nearby_stations_success_save_weather_station">Successfully saved weather station</string>
+    <string name="nearby_stations_subtitle">Nearby weather stations</string>
+
+    <!-- Network Settings screen-->
+    <string name="network_settings_local_discovery">Local Discovery</string>
+    <string name="network_settings_help_local_discovery">Enable or disable local discovery. Disabling Local discovery will force all connections through RainMachine Proxy Service.\n\nNOTE: Local Discovery might not work in LAN environments with multiple Wi-Fi repeaters.</string>
+
+    <!-- Offline screen -->
+    <string name="offline_description">RainMachine is OFFLINE\n\nThis may be because:\n- there was an electrical outage,\n- the RainMachine device is unplugged,\n- Wi-Fi connection on the device is bad or is off</string>
+    <string name="offline_forget">Forget this device</string>
+    <string name="offline_no_longer">If you no longer wish to view this RainMachine device in your list</string>
+
+    <!-- Physical Touch screen-->
+    <string name="physical_touch_tap_device">Tap device</string>
+    <string name="physical_touch_button">To continue with the setup process, tap on any of the backlit touch buttons from the RainMachine device.</string>
+
+    <!-- Program Details screen-->
+    <string name="program_details_select_week_days">Select week days</string>
+    <string name="program_details_every">Every</string>
+    <string name="program_details_error_saving_program">Error saving program</string>
+    <string name="program_details_at_least_one_watering_time">Add watering time for at least one zone</string>
+    <string name="program_details_select_weekday">Select at least a weekday or change frequency type</string>
+    <string name="program_details_auto">Auto</string>
+    <string name="program_details_start_time">Start time</string>
+    <string name="program_details_cycle_soak">Cycle &amp; Soak</string>
+    <string name="program_details_station_delay">Delay between zones</string>
+    <string name="program_details_watering_time">Watering Time</string>
+    <string name="program_details_watering_time_minutes_seconds">Watering Time (mm:ss)</string>
+    <string name="program_details_weather_data">Weather data</string>
+    <string name="program_details_set_duration">Set duration</string>
+    <string name="program_details_set_duration_minutes_seconds">Set duration (mm:ss)</string>
+    <string name="program_details_set_duration_minutes">Set duration (minutes)</string>
+    <string name="program_details_min">min</string>
+    <string name="program_details_program_name">Program name</string>
+    <string name="program_details_odd_days">Odd days</string>
+    <string name="program_details_even_days">Even days</string>
+    <string name="program_details_cycles_delayed_by">cycles delayed</string>
+    <string name="program_details_success_save_program">Successfully saved program</string>
+    <string name="program_details_unsaved_changes_program">There are unsaved changes to this program. Are you sure you want to leave the screen?</string>
+    <string name="program_details_time_of_day">Time of day (hh:mm)</string>
+    <string name="program_details_next_run">Next run</string>
+    <string name="program_details_past_next_run">Next run must be a date in the future</string>
+    <string name="program_details_daily">Daily</string>
+    <string name="program_details_selected_days">Selected days</string>
+    <string name="program_details_not_run_program">Rain Restriction</string>
+    <string name="program_details_adjust_times">Weather-Adaptive Watering</string>
+    <string name="program_details_weather_fixed">Fixed</string>
+    <string name="program_details_override_algorithm">Required by some municipalities. This will override RainMachine algorithm.</string>
+    <string name="program_details_zone_name">Zone name</string>
+    <string name="program_details_every_n_days">Every %1$d days</string>
+    <string name="program_details_change_next_run">Change next run</string>
+    <string name="program_details_off">Off</string>
+    <string name="program_details_zone_name_index">%1$s. %2$s</string>
+    <string name="program_details_not_set">Not set</string>
+    <string name="program_details_total_watering_time">Total watering time</string>
+    <string name="program_details_copy">Copy to New Program</string>
+    <string name="program_details_success_delete_program">Successfully deleted program</string>
+    <string name="program_details_success_copy_program">Successfully copied the program to a new one</string>
+    <string name="program_details_zone_duration">Duration</string>
+    <string name="program_details_previous_zone">Previous zone</string>
+    <string name="program_details_next_zone">Next zone</string>
+    <string name="program_details_duration_adjusted">Weather-Adaptive Watering is ON\nSuggested Duration is determined from your plant type, soil and location properties for a typical summer day.</string>
+    <string name="program_details_suggested">Suggested</string>
+    <string name="program_details_zone_settings_default">Zone settings are set to default values.\nMake sure they are correct.</string>
+    <string name="program_details_adjust">Adjust</string>
+    <string name="program_details_is_active">Program is Active</string>
+    <string name="program_details_zone_duration_weather">Zone duration based on weather</string>
+    <string name="program_details_weather_adaptive_hint">Use Live Weather or Seasonal Adjustments as specified on your zones properties.</string>
+    <string name="program_details_weather_fixed_hint">Fixed watering durations for each zone.</string>
+    <string name="program_details_advanced_settings">Advanced Settings</string>
+    <string name="program_details_is_inactive">Program is inactive</string>
+    <string name="program_details_advanced_hint"><![CDATA[Weather-Adaptive Watering, Cycle & Soak, Delay between zones, Rain restrictions]]></string>
+    <string name="program_details_next_run_full">Next run on %1$s at %2$s</string>
+    <plurals name="program_details_covers">
+        <item quantity="one">covers %1$d day</item>
+        <item quantity="other">covers %1$d days</item>
+    </plurals>
+    <plurals name="program_details_x_cycles">
+        <item quantity="one">1 cycle</item>
+        <item quantity="other">%1$d cycles</item>
+    </plurals>
+    <plurals name="program_details_x_soak">
+        <item quantity="one">1 min soak</item>
+        <item quantity="other">%1$d min soak</item>
+    </plurals>
+    <string-array name="program_details_before_after">
+        <item>before</item>
+        <item>after</item>
+    </string-array>
+    <string-array name="program_details_sunrise_sunset">
+        <item>sunrise</item>
+        <item>sunset</item>
+    </string-array>
+    <string-array name="program_details_every_n_days">
+        <item>Every 2 days</item>
+        <item>Every 3 days</item>
+        <item>Every 4 days</item>
+        <item>Every 5 days</item>
+        <item>Every 6 days</item>
+        <item>Every 7 days</item>
+        <item>Every 8 days</item>
+        <item>Every 9 days</item>
+        <item>Every 10 days</item>
+        <item>Every 11 days</item>
+        <item>Every 12 days</item>
+        <item>Every 13 days</item>
+        <item>Every 14 days</item>
+    </string-array>
+    <string-array name="program_details_not_run_mm">
+        <item>2 mm</item>
+        <item>3 mm</item>
+        <item>6 mm</item>
+        <item>13 mm</item>
+        <item>19 mm</item>
+        <item>25 mm</item>
+        <item>@string/all_not_set</item>
+    </string-array>
+    <string-array name="program_details_not_run_inch" tools:ignore="TypographyFractions">
+        <item>1/16 inch</item>
+        <item>1/8 inch</item>
+        <item>1/4 inch</item>
+        <item>1/2 inch</item>
+        <item>3/4 inch</item>
+        <item>1 inch</item>
+        <item>@string/all_not_set</item>
+    </string-array>
+
+    <!-- Programs screen-->
+    <string name="programs_daily_at">Daily %1$s</string>
+    <string name="programs_weekdays_at">%1$s %2$s</string>
+    <string name="programs_at">at %1$s</string>
+    <string name="programs_odd_days_at">Odd days %1$s</string>
+    <string name="programs_even_days_at">Even days %1$s</string>
+    <string name="programs_every_n_days_at">Every %1$s days %2$s</string>
+    <string name="programs_new_program">New Program</string>
+    <string name="programs_next_run">Next run on: %1$s</string>
+    <string name="programs_activate">Activate</string>
+    <string name="programs_deactivate">Deactivate</string>
+
+    <!-- Program Sunrise Sunset screen -->
+    <string name="program_sunrise_sunset_set">Set program start time based on Sun\'s position.</string>
+
+    <!-- Push Notifications screen -->
+    <string name="push_notifications_error">Error fetching or updating notifications</string>
+    <string name="push_notifications_disconnected">RainMachine is Offline</string>
+    <string name="push_notifications_connected">RainMachine is Online</string>
+    <string name="push_notifications_firmware_update">New Firmware Update</string>
+    <string name="push_notifications_zone_start_stop">Zone Start/Stop</string>
+    <string name="push_notifications_program_start_stop">Program Start/Stop</string>
+    <string name="push_notifications_weather_update">Weather Update</string>
+    <string name="push_notifications_rain_sensor">Rain Sensor Detects Rain</string>
+    <string name="push_notifications_snooze">Snooze is Active/Inactive</string>
+    <string name="push_notifications_freeze_temperature">Freeze Temperature</string>
+    <string name="push_notifications_remote_access_info">In order to get notifications you must set up a remote access account for your device.</string>
+    <string name="push_notifications_set_up_remote_access">Set up remote access</string>
+    <string name="push_notifications_short">Short detect on valve connector</string>
+    <string name="push_notifications_reboot">Reboot during watering event</string>
+
+    <!-- Rain Delay screen-->
+    <string name="rain_delay_delay">Delay</string>
+    <string name="rain_delay_resume">Resume</string>
+    <string name="rain_delay_success_set">Successfully set rain delay</string>
+    <string name="rain_delay_success_snooze">Snooze successfully set</string>
+    <string name="rain_delay_success_resume">Successfully resumed</string>
+    <string name="rain_delay_explanation">Prevents the device from starting any watering activity for the defined duration.</string>
+    <string name="rain_delay_invalid_message">Enter a positive value for the snooze duration!</string>
+    <string name="rain_delay_days">Days</string>
+    <string name="rain_delay_hours">Hours</string>
+    <string name="rain_delay_minutes">Minutes</string>
+    <plurals name="rain_delay_days">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+
+    <!-- Rain Sensitivity screen-->
+    <string name="rain_sensitivity_help" formatted="false">Amount of rain adjusted with multiplier from 0 to 100%. Default is 80%.\nNot all rain gets to the plants, consider runoffs.</string>
+    <string name="rain_sensitivity_success_set">Successfully saved rain sensitivity values</string>
+
+    <!-- Rain Sensor screen-->
+    <string name="rain_sensor_hardware_subtitle">Stop all watering when rain is detected.</string>
+    <string name="rain_sensor_closed">Rain Sensor Normally Closed</string>
+    <string name="rain_sensor_closed_subtitle">Hardware Rain Sensor is normally closed and open when rain is detected.</string>
+    <string name="rain_sensor_last_rain_event">Last detected rain event</string>
+    <string name="rain_sensor_while_detected">After rain has stopped</string>
+    <string name="rain_sensor_stop">resume normal operation</string>
+    <string name="rain_sensor_stop_midnight">snooze device until midnight</string>
+    <string name="rain_sensor_stop_6">snooze device for 6 hours</string>
+    <string name="rain_sensor_stop_12">snooze device for 12 hours</string>
+    <string name="rain_sensor_stop_24">snooze device for 24 hours</string>
+    <string name="rain_sensor_stop_48">snooze device for 48 hours</string>
+    <string name="rain_sensor_never">Never</string>
+    <string name="rain_sensor_options">Options</string>
+    <string name="rain_sensor_connect">How to connect a Rain Sensor to RainMachine</string>
+    <string name="rain_sensor_active">Active</string>
+    <string name="rain_sensor_rain_sensor_type">Rain Sensor Type</string>
+    <string name="rain_sensor_rain_detected">Rain Detected</string>
+
+    <!-- Remote Access screen-->
+    <string name="remote_access_stars">********</string>
+    <string name="remote_access_set_password">Password</string>
+    <string name="remote_access_disable_local_message">Are you sure you want to disable Remote Access? You will lose the remote connection to your RainMachine.</string>
+    <string name="remote_access_disable_cloud_message">Are you sure you want to disable Remote Access? You will lose your remote connection to your RainMachine.</string>
+    <string name="remote_access_success_change_password">Successfully changed password</string>
+    <string name="remote_access_send_confirmation_email">Resend confirmation email</string>
+    <string name="remote_access_cloud_email">Email</string>
+    <string name="remote_access_set_cloud_email">Email</string>
+    <string name="remote_access_password">RainMachine password</string>
+
+    <!-- Restore Backup screen -->
+    <string name="restore_backup_available_backups">Available backups</string>
+    <string name="restore_backup_explanation">Every time a RainMachine was accessed using this app, a backup of its Zones, Programs and Watering Restrictions* was saved.</string>
+    <string name="restore_backup_explanation_restrictions">*Watering Restrictions backup is not available for the 1st gen of RainMachine Touch HD-12 devices.</string>
+    <string name="restore_backup_description">Last backup: %1$s</string>
+    <string name="restore_backup_description_date">%1$s at %2$s</string>
+    <string name="restore_backup_mini8">Mini-8</string>
+    <string name="restore_backup_touch_hd_12">HD-12</string>
+    <string name="restore_backup_touch_hd_16">HD-16</string>
+    <string name="restore_backup_touch_hd_12_old">1st gen HD-12</string>
+    <string name="restore_backup_are_you_sure_message">Restore \"%1$s\" backup saved on %2$s. All zones, programs and watering restrictions on your device will be replaced with the ones from this backup.</string>
+    <string name="restore_backup_title">Restore Backup</string>
+    <string name="restore_backup_restore">Restore</string>
+    <string name="restore_backup_dialog_title">Choose which backup version to restore</string>
+    <string name="restore_backup_failure">Failure to restore backup.</string>
+    <string name="restore_backup_success">Successfully restored backup.</string>
+    <string name="restore_backup_success_zones_8_vs_12">Successfully restored backup. Please be aware that only the first 8 out of the 12 zones from the backup were restored.</string>
+    <string name="restore_backup_success_zones_8_vs_16">Successfully restored backup. Please be aware that only the first 8 out of the 16 zones from the backup were restored.</string>
+    <string name="restore_backup_success_zones_12_vs_16">Successfully restored backup. Please be aware that only the first 12 out of the 16 zones from the backup were restored.</string>
+
+    <!-- Restrictions screen-->
+    <string name="restrictions_do_not_water_months">Do not water on specified months.</string>
+    <string name="restrictions_do_not_water_days">Do not water on specified days.\nEvapotranspiration calculations are discarded on the restricted days.</string>
+    <string name="restrictions_hot_days">Hot Days</string>
+    <string name="restrictions_restricted_months">Restricted Months</string>
+    <string name="restrictions_restricted_days">Restricted Days</string>
+    <string name="restrictions_week_days">Days</string>
+    <string name="restrictions_allow_extra_watering">Allow extra watering</string>
+    <string name="restrictions_do_not_water_under">Do not water under %1$d%2$s</string>
+    <string name="restrictions_do_not_water_under_title">Do not water under</string>
+    <string name="restrictions_max_watering_percent">Max percentage for overwatering %1$d %%</string>
+    <string name="restrictions_duration_threshold">Minimum Watering Time</string>
+    <string name="restrictions_duration_threshold_subtitle">This feature allows users to set a minimum time for their sprinklers to run. Any time below that threshold will rollover to the next watering cycle.</string>
+    <string name="restrictions_watering_coefficient">Maximum Watering Coefficient</string>
+    <string-array name="restrictions_months">
+        <item>@string/all_january</item>
+        <item>@string/all_february</item>
+        <item>@string/all_march</item>
+        <item>@string/all_april</item>
+        <item>@string/all_may</item>
+        <item>@string/all_june</item>
+        <item>@string/all_july</item>
+        <item>@string/all_august</item>
+        <item>@string/all_september</item>
+        <item>@string/all_october</item>
+        <item>@string/all_november</item>
+        <item>@string/all_december</item>
+    </string-array>
+
+    <!-- Save Hourly Restrictions screen-->
+    <string name="save_hourly_restriction_subtitle">Hourly restrictions</string>
+    <string name="save_hourly_restriction_select_restriction_days">Select days</string>
+    <string name="save_hourly_restriction_from">From</string>
+    <string name="save_hourly_restriction_to">To</string>
+    <string name="save_hourly_restriction_to_before_from">Not a valid time interval</string>
+    <string name="save_hourly_restriction_no_selected_days">Select at least one day of the week</string>
+    <string name="save_hourly_restriction_success_save_restriction">Successfully saved restriction</string>
+
+    <!-- Settings screen-->
+    <string name="settings_rain_delay">Rain Delay</string>
+    <string name="settings_device_subtitle3">Units, Date, Time</string>
+    <string name="settings_device_subtitle">Network, Location, Time, Restore&#8230;</string>
+    <string name="settings_help_weather">Advanced settings for weather sources, rain and wind sensitivity&#8230;</string>
+    <string name="settings_help_snooze">Temporarily pause all watering activities&#8230;</string>
+    <string name="settings_help_restrictions">Do not water on specific Months, Days or Hours&#8230;</string>
+    <string name="settings_about_subtitle">Version info, System stats&#8230;</string>
+    <string name="settings_about_subtitle3">Version info</string>
+    <string name="settings_show_graph">Show or hide graph on Dashboard screen</string>
+
+    <!-- Software Update screen-->
+    <string name="software_update_no_updates_found">No updates found.\nCurrent version:</string>
+    <string name="software_update_new_update_found">New update found:</string>
+    <string name="software_update_current_version">Current version:</string>
+    <string name="software_update_new_update_found_current_version">New update found.\nCurrent version:</string>
+    <string name="software_update_in_progress">Firmware update in progress…</string>
+    <string name="software_update_checking_software_update">Checking software update…</string>
+
+    <!-- Stats screen-->
+    <string name="stats_noaa">NOAA</string>
+    <string name="stats_last_update">Last update: %1$s</string>
+    <string name="stats_not_connected">Not connected</string>
+    <string name="stats_circle_temperature">\u00B0</string>
+    <string name="stats_last_weather_update">Last weather update: %1$s.</string>
+    <string name="stats_water_saved_7_days">Water saved past 7 days: %s</string>
+    <string name="stats_water_saved_30_days">Water saved past 30 days: %s</string>
+    <string name="stats_water_saved_365_days">Water saved past 365 days: %s</string>
+    <string name="stats_water_saved_amount_metric">%1$.1f m&#179;</string>
+    <string name="stats_water_saved_amount_us">%1$.1f gallons</string>
+    <string name="stats_next_watering_cycle">Next watering cycle starts:\n%1$s</string>
+    <string name="stats_no_next_watering_cycle">No scheduled watering cycle.</string>
+    <string name="stats_downloading_data">Downloading data from device&#8230;</string>
+    <string name="stats_regenerating_graph">Regenerating graph&#8230;</string>
+    <string name="stats_edit">Edit</string>
+    <string name="stats_show_on_dashboard">Show on Dashboard</string>
+    <string name="stats_show_logs">Show Logs</string>
+    <string name="stats_dashboard_graphs_programs">Programs</string>
+    <string name="stats_edit_program">Edit Program</string>
+    <string-array name="stats_watering_flag">
+        <item>""</item>
+        <item>WATERING RESTRICTIONS</item>
+        <item>RAIN DELAY</item>
+        <item>FREEZE CONTROL</item>
+        <item>WATER SURPLUS</item>
+    </string-array>
+
+    <!-- Stats Details screen-->
+    <string name="stats_details_subtitle">Stats details</string>
+    <string name="stats_details_weather_title">Weather (Temperature and Rain Amount)</string>
+
+    <!-- Sprinkler Delegate -->
+    <string name="sprinkler_delegate_go_to_settings">Go to Advanced Wi-Fi Settings</string>
+    <string name="sprinkler_delegate_poor_network_description">Your device has a setting enabled that negatively impacts the connection to the RainMachine Wi-Fi.\n\nPlease go to the Advanced Wi-Fi Settings screen and disable it. The setting is called either \"Avoid poor networks\" or \"Auto network switch\".\n\nIf you can not find this setting, please temporarily disable your mobile 3G/4G data connection and press I FEEL LUCKY below.</string>
+    <string name="sprinkler_delegate_poor_network_title">Warning</string>
+    <string name="sprinkler_delegate_lucky">I feel lucky</string>
+
+    <!-- System Settings screen-->
+    <string name="system_settings_reset_defaults">Factory Reset</string>
+    <string name="system_settings_reset_defaults_info">Restore initial settings</string>
+    <string name="system_settings_success_reset_defaults">Successfully restored initial settings. RainMachine is now rebooting…</string>
+    <string name="system_settings_restore_backup_info">Restore zones, programs and watering restrictions</string>
+    <string name="system_settings_restore_backup_info_spk1">Restore zones and programs</string>
+    <string name="system_settings_generate_pin">Generate Guest/Support PIN</string>
+    <string name="system_settings_generate_pin_info">Generated PIN can be used for a limited time by a guest or support person to log in.</string>
+    <string name="system_settings_units">Units</string>
+    <string name="system_settings_date">Date</string>
+    <string name="system_settings_time">Time</string>
+    <string name="system_settings_set_units">Set Units</string>
+    <string name="system_settings_use_hour_format">Use 24-hour format</string>
+    <string name="system_settings_metric">Metric</string>
+    <string name="system_settings_us">US</string>
+    <string name="system_settings_support_pin">Support PIN %1$s</string>
+    <string name="system_settings_support_pin_details">Read this PIN to the guest/support person in order to allow remote logging on this device.</string>
+    <string name="system_settings_wifi">Wi-Fi</string>
+    <string name="system_settings_location">Location</string>
+    <string name="system_settings_reset_default_description">All your programs, zone properties and Wi-Fi settings will be removed.</string>
+    <string name="system_settings_set_device_name">Set Device Name</string>
+    <string name="system_settings_not_activated">Not activated</string>
+    <string name="system_settings_timezone">Timezone</string>
+    <string name="system_settings_error_restore_backup">Error restoring full backup.</string>
+    <string name="system_settings_reboot">Reboot Device</string>
+    <string name="system_settings_reboot_info">This action will restart the device. No settings or data will be affected.</string>
+    <string name="system_settings_reboot_description">This action reboots the device.</string>
+    <string name="system_settings_network_remote_access"><![CDATA[Network & Remote Access]]></string>
+    <string name="system_settings_location_date"><![CDATA[Location, Date & Time, Units]]></string>
+    <string name="system_settings_restore">Restore</string>
+    <string name="system_settings_pin">PIN code</string>
+    <string name="system_settings_reboot_reset"><![CDATA[Reboot & Reset]]></string>
+    <string name="system_settings_updates">Updates</string>
+    <string name="system_settings_advanced">Advanced</string>
+    <string name="system_settings_mini8_settings"><![CDATA[Display, LED & Touch]]></string>
+
+    <!-- Watering History screen-->
+    <string name="watering_history_program_unknown">Program unknown (id = %1$d)</string>
+    <string name="watering_history_zone_unknown">Zone unknown (id = %1$d)</string>
+    <string name="watering_history_scheduled">Scheduled</string>
+    <string name="watering_history_watered">Watered</string>
+    <string name="watering_history_water_used">Water Used (%1$s)</string>
+    <string name="watering_history_water_scheduled">Water Scheduled (%1$s)</string>
+    <string name="watering_history_no_watering_data">No watering data</string>
+    <string name="watering_history_export">Export</string>
+    <string name="watering_history_manual_watering">Manual watering</string>
+    <string name="watering_history_error_export">Error creating export file</string>
+    <string name="watering_history_csv_date">Date</string>
+    <string name="watering_history_csv_program_name">Program name</string>
+    <string name="watering_history_csv_zone_name">Zone name</string>
+    <string name="watering_history_csv_cycle">Cycle</string>
+    <string name="watering_history_csv_time_scheduled">Time scheduled (HH:MM:SS)</string>
+    <string name="watering_history_csv_time_watered">Time watered (HH:MM:SS)</string>
+    <string name="watering_history_csv_zone_start_time">Zone start time</string>
+    <string name="watering_history_csv_zone_end_time">Zone end time</string>
+    <string name="watering_history_started_at">Started at %1$s</string>
+    <string name="watering_history_water_saved">Water saved: %1$s %2$s</string>
+    <string name="watering_history_csv_condition_stopped_user">Stopped by user</string>
+    <string name="watering_history_csv_condition_minimum_time">Minimum watering time</string>
+    <string name="watering_history_csv_condition_freeze_protect">Freeze protect</string>
+    <string name="watering_history_csv_condition_day_restriction">Day restriction</string>
+    <string name="watering_history_csv_condition_watering_next_day">Watering time reaches next day</string>
+    <string name="watering_history_csv_condition_surplus">Water surplus</string>
+    <string name="watering_history_csv_condition_rain_detected">Rain detected</string>
+    <string name="watering_history_csv_condition_rain_sensor">Software rain sensor restriction</string>
+    <string name="watering_history_csv_condition_month_restriction">Month Restricted</string>
+    <string name="watering_history_csv_condition_rain_delay">Rain Delay set by user</string>
+    <string name="watering_history_csv_condition_program_rain_restriction">Program Rain Restriction</string>
+    <string name="watering_history_csv_special_conditions">Special Conditions</string>
+    <string name="watering_history_csv_zone_number">Zone number</string>
+    <string-array name="watering_history_interval">
+        <item>7 Day Watering History</item>
+        <item>31 Day Watering History</item>
+        <item>365 Day Watering History</item>
+    </string-array>
+
+    <!-- Water Now screen-->
+    <string name="water_now_stop_all_sure">Are you sure you want to stop all watering?</string>
+    <string name="water_now_stop_all_success">Successfully stopped all watering</string>
+    <string name="water_now_master_valve_pre_open">Master Valve pre-open</string>
+    <string name="water_now_master_valve_post_open">Master Valve post-open</string>
+    <string name="water_now_zone_delay">Delay between zones</string>
+    <string name="water_now_soak_time">Soak time after cycle %1$d/%2$d</string>
+    <string name="water_now_watering_now">Watering now…</string>
+    <string name="water_now_pending">Pending…</string>
+    <string name="water_now_next_watering">Next watering: %1$s</string>
+    <string name="water_now_master_valve">Master Valve</string>
+    <string name="water_now_min">min</string>
+    <string name="water_now_sec">sec</string>
+    <string name="water_now_closed">Closed</string>
+    <string name="water_now_open">Open</string>
+
+    <!-- Weather Settings screen-->
+    <string name="weather_settings_default_weather_source">%1$s (default)</string>
+    <string name="weather_settings_wind_sensitivity_changed">Wind sensitivity changed to %1$d%%</string>
+    <string name="weather_settings_are_you_sure_defaults">Are you sure you want to restore weather settings to default values?</string>
+    <string name="weather_settings_advanced">Advanced Weather Settings</string>
+    <string name="weather_settings_active_weather_services">Active Weather Services</string>
+    <string name="weather_settings_rain_sensitivity_changed">Rain sensitivity changed to %1$d%%</string>
+    <string name="weather_settings_help_advanced">These settings are meant for advanced users. Changing their values could affect all RainMachine watering activities.</string>
+    <string name="weather_settings_help_noaa">Based on your location, NOAA (National Oceanic and Atmospheric Administration) is the recommended and sufficient weather data service.</string>
+    <plurals name="weather_settings_field_capacity_changed">
+        <item quantity="one">Field capacity changed to %1$d day</item>
+        <item quantity="other">Field capacity changed to %1$d days</item>
+    </plurals>
+
+    <!-- Weather Sensitivity screen-->
+    <string name="weather_sensitivity_use_correction_title">Use correction for past (BETA)</string>
+    <string name="weather_sensitivity_use_correction">Use Correction for Past</string>
+    <string name="weather_sensitivity_use_correction_subtitle">If future water needs should take in account past precipitations. This works best if you are using a weather service that has weather stations.</string>
+
+    <!-- Weather Source Details screen-->
+    <string name="weather_source_details_success_save_parser">Successfully saved weather source</string>
+    <string name="weather_source_details_error_save_parser">Unable to save weather source</string>
+    <string name="weather_source_details_wunderground_instruction">In order to use WUnderground weather source you must obtain WUnderground Developer API key.</string>
+    <string name="weather_source_details_learn_more">Learn more</string>
+    <string name="weather_source_details_developer_api_key">WUnderground Developer API key</string>
+    <string name="weather_source_details_test_wunderground_developer_key">Test WUnderground service using your Developer API key:&#160;</string>
+    <string name="weather_source_details_please_wait">Please wait…</string>
+    <string name="weather_source_details_test_netatmo_credentials">Test NetAtmo service using your credentials:&#160;</string>
+    <string name="weather_source_details_failed_try_again">FAILED! Please try again.</string>
+    <string name="weather_source_details_passed">PASSED</string>
+    <string name="weather_source_details_use_weather_station">Optionally you can use one nearby weather station that\'s closest to your location</string>
+    <string name="weather_source_details_select_nearby_weather_station">Select a nearby weather station</string>
+    <string name="weather_source_details_params">params</string>
+    <string name="weather_source_details_username_one_word">Username</string>
+    <string name="weather_source_details_modules">NetAtmo available modules</string>
+    <string name="weather_source_details_default_word">Default</string>
+    <string name="weather_source_details_select_modules">Select modules</string>
+    <string name="weather_source_details_invalid_netatmo_credentials">Invalid NetAtmo credentials</string>
+    <string name="weather_source_details_invalid_wunderground_credentials">Invalid WUnderground Developer API key</string>
+    <string name="weather_source_details_status">status</string>
+    <string name="weather_source_details_restore_defaults">Restore to defaults</string>
+
+    <!-- Weather Sources screen-->
+    <string name="weather_sources_error_msg_save_parser_enabled">Unable to save weather source setting</string>
+    <string name="weather_sources_error_msg_add_weather_source">Unable to add weather source</string>
+    <string name="weather_sources_help">If multiple weather sources are enabled the results will be averaged.</string>
+    <string name="weather_sources_add">Add weather source</string>
+    <string name="weather_sources_enter_url">Enter weather source url</string>
+    <string name="weather_sources_success_add">Successfully added weather source</string>
+
+    <!-- Wifi screen-->
+    <string name="wifi_error_authentication_title">Wi-Fi authentication failed</string>
+    <string name="wifi_error_authentication">Authentication failed for %1$s Wi-Fi. Please make sure you enter the Wi-Fi password correctly.</string>
+    <string name="wifi_error_udp">Your RainMachine could not be connected successfully to your \"%1$s\" Wi-Fi network. This is usually due to either a bad password or weak Wi-Fi signal strength at RainMachine location. Please try again.</string>
+    <string name="wifi_password">Wi-Fi password</string>
+    <string name="wifi_error_invalid_address">Invalid address</string>
+    <string name="wifi_skip_wifi_description">You would not be able to download weather data.</string>
+    <string name="wifi_security">Security</string>
+    <string name="wifi_ip_settings">IP settings</string>
+    <string name="wifi_title_ip_address">IP address</string>
+    <string name="wifi_hint_ip_address">192.168.1.128</string>
+    <string name="wifi_title_netmask">Netmask</string>
+    <string name="wifi_hint_netmask">255.255.255.0</string>
+    <string name="wifi_title_gateway">Gateway</string>
+    <string name="wifi_hint_gateway">192.168.1.1</string>
+    <string name="wifi_title_dns">DNS</string>
+    <string name="wifi_hint_dns">8.8.8.8</string>
+    <string name="wifi_network_ssid">Network SSID</string>
+    <string name="wifi_enter_ssid">Enter the SSID</string>
+    <string name="wifi_advanced_options">Show advanced options</string>
+    <string name="wifi_enter_password">Enter the password</string>
+    <string name="wifi_rebooting_rain_machine">Rebooting RainMachine to %1$s Wi-Fi…</string>
+    <string name="wifi_success_connecting_wifi">Successfully connected to the desired Wi-Fi network</string>
+    <string name="wifi_connect_to_wifi">Connect to a Wi-Fi network</string>
+    <string name="wifi_connect">Connect</string>
+    <string name="wifi_add_network">Add network</string>
+    <string name="wifi_settings_type_password">Please make sure you are typing the correct Wi-Fi password. Thank you.</string>
+    <string name="wifi_dbm">%1$d dBm</string>
+    <string-array name="wifi_security">
+        <item>@string/all</item>
+        <item>WEP</item>
+        <item>WPA</item>
+        <item>WPA2</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Static</item>
+    </string-array>
+
+    <!-- Wind Sensitivity screen-->
+    <string name="wind_sensitivity_help">0&#8211;33% Little or no wind exposure.\n33&#8211;75% Urban areas + trees (Default).\n75&#8211;100% Full wind exposure, open fields.</string>
+    <string name="wind_sensitivity_success_set">Successfully saved wind sensitivity</string>
+
+    <!-- Wizard Device Name screen-->
+    <string name="wizard_device_name_success_set_name_password">Successfully saved name and password</string>
+
+    <!-- Wizard Password screen-->
+    <string name="wizard_password_success_set_password">Successfully saved password</string>
+
+    <!-- Wizard Remote Access screen-->
+    <string name="wizard_remote_access_skip_message">In order to remotely access your RainMachine, you need to provide a valid email.</string>
+    <string name="wizard_remote_access_help">In order to be able to access your RainMachine remotely you need to provide a valid email address.</string>
+    <string name="wizard_remote_access_back">Back</string>
+
+    <!-- Wizard Timezone screen-->
+    <string name="wizard_timezone_success_set_time_date">Successfully saved time and date</string>
+    <string name="wizard_timezone_set_date_time">Set date and time</string>
+    <string name="wizard_timezone_set_timezone">Set Timezone</string>
+
+    <!-- Zone Details screen-->
+    <string name="zone_details_error_saving_zone">Error saving zone</string>
+    <string name="zone_details_weather_data">Use Weather Data</string>
+    <string name="zone_details_weather_data_hint">Adjust watering times based on live weather data. (Needs Internet connection)</string>
+    <string name="zone_details_historical_data">Use Seasonal Adjustments</string>
+    <string name="zone_details_historical_data_hint">Adjust watering times based on locally stored daily averages based on 10 year weather history for your location. (No Internet connection needed)</string>
+    <string name="zone_details_vegetation_type">Vegetation type</string>
+    <string name="zone_details_before_program_starts">Before program starts</string>
+    <string name="zone_details_after_program_ends">After program ends</string>
+    <string name="zone_details_master_valve_info">Open \'Master Valve\' before a program starts and keep the \'Master Valve\' ON after a program ends.</string>
+    <string name="zone_details_success_save_zone">Successfully saved zone</string>
+    <string name="zone_details_water_zone">Water zone</string>
+    <string name="zone_details_master_valve_before_title">Open \"Master Valve\" before cycle/program starts for (mm:ss):</string>
+    <string name="zone_details_master_valve_after_title">Keep \"Master Valve\" on after cycle/program ends for (mm:ss):</string>
+    <string name="zone_details_advanced">Advanced Zone Settings</string>
+    <string name="zone_details_master_valve">Master Valve (Pump)</string>
+    <string name="zone_details_name">Name</string>
+    <string name="zone_details_show_image">Show Zone Image</string>
+    <string name="zone_details_choose_image">Choose Zone Image</string>
+    <string name="zone_details_lawn">Lawn</string>
+    <string name="zone_details_fruit_trees">Fruit trees</string>
+    <string name="zone_details_flowers">Flowers</string>
+    <string name="zone_details_vegetables">Vegetables</string>
+    <string name="zone_details_citrus">Citrus</string>
+    <string name="zone_details_trees_bushes">Trees and bushes</string>
+    <string name="zone_details_xeriscape">Drought tolerant plants</string>
+    <string name="zone_details_field_capacity">Field Capacity</string>
+    <string name="zone_details_soil_type">Soil type</string>
+    <string name="zone_details_sprinkler_heads">Sprinkler heads</string>
+    <string name="zone_details_slope">Slope</string>
+    <string name="zone_details_exposure">Exposure</string>
+    <string name="zone_details_soil_clay_loam">Clay loam</string>
+    <string name="zone_details_soil_silty_clay">Silty clay</string>
+    <string name="zone_details_soil_clay">Clay</string>
+    <string name="zone_details_soil_loam">Loam</string>
+    <string name="zone_details_soil_sandy_loam">Sandy loam</string>
+    <string name="zone_details_soil_loamy_sand">Loamy sand</string>
+    <string name="zone_details_soil_sand">Sand</string>
+    <string name="zone_details_soil_sandy_clay">Sandy clay</string>
+    <string name="zone_details_soil_silt_loam">Silt loam</string>
+    <string name="zone_details_soil_silt">Silt</string>
+    <string name="zone_details_head_popup_spray">Popup spray</string>
+    <string name="zone_details_head_rotors">Rotors</string>
+    <string name="zone_details_head_surface_drip">Surface drip</string>
+    <string name="zone_details_head_bubblers_drip">Bubblers drip</string>
+    <string name="zone_details_slope_flat">Flat</string>
+    <string name="zone_details_slope_moderate">Moderate</string>
+    <string name="zone_details_slope_high">High</string>
+    <string name="zone_details_slope_very_high">Very high</string>
+    <string name="zone_details_exposure_full_sun">Full sun</string>
+    <string name="zone_details_exposure_partial_shade">Partial shade</string>
+    <string name="zone_details_exposure_full_shade">Full shade</string>
+    <string name="zone_details_summer_time">Daily summer watering time suggested by EPA WaterSense</string>
+    <string name="zone_details_summer_time_hint">Not scheduled. This is just a suggestion.</string>
+    <string name="zone_details_summer_time_desc">Scheduled to run for a typical summer day and calculated based on advanced zone settings properties. This time will be adjusted automatically to any program that uses this zone.</string>
+    <string name="zone_details_increase_field_capacity">Increase this value if the RainMachine starts too soon after a rain event.</string>
+    <string name="zone_details_amount">The amount of water content held in the soil after excess water has drained away.</string>
+    <string name="zone_details_surface_accumulation">Surface accumulation</string>
+    <string name="zone_details_intake_rate">Intake rate</string>
+    <string name="zone_details_decimal_percentage">decimal %</string>
+    <string name="zone_details_soil_field_capacity">Soil field capacity</string>
+    <string name="zone_details_precipitation_rate">Precipitation rate</string>
+    <string name="zone_details_application_efficiency">Application efficiency</string>
+    <string name="zone_details_allowed_depletion">Allowed depletion</string>
+    <string name="zone_details_root_depth">Root depth</string>
+    <string name="zone_details_wilting">Permanent wilting point</string>
+    <string name="zone_details_tall_vegetation">Tall vegetation</string>
+    <string name="zone_details_crop_coefficient">Crop coefficient</string>
+    <string name="zone_details_single_year_value">Single year value</string>
+    <string name="zone_details_multiple_monthly_values">Multiple monthly values</string>
+    <string name="zone_details_crop_coefficient_title">Crop coefficient\nMultiple monthly values</string>
+    <string name="zone_details_weather_settings"><![CDATA[Weather & Seasonal Adjustments]]></string>
+    <string name="zone_details_zone_active">Zone is Active</string>
+    <string name="zone_details_weather_info">Note: If weather data is temporarily unreachable  RainMachine will automatically fall back on Seasonal Adjustments until connectivity is restored. If Seasonal Adjustments is turned off the fallback will be \"Do not Adjust\".</string>
+    <string name="zone_details_do_not_adjust">Do not Adjust</string>
+    <string name="zone_details_adjust_hint">Keep watering times exactly as set by user.</string>
+    <string name="zone_details_flow_rate_reporting">Zone Flow Rate Reporting</string>
+    <string name="zone_details_area">Area</string>
+    <string name="zone_details_total_flow">Total flow</string>
+    <string name="zone_details_area_units_square_foot">ft&#178;</string>
+    <string name="zone_details_area_units_square_metre">m&#178;</string>
+    <string name="zone_details_flow_rate_units_gallons_minute">gal/min</string>
+    <string name="zone_details_flow_rate_units_cubic_metre_hour">m&#179;/h</string>
+    <string name="zone_details_flow_rate_note">Use these options if you want watering history to also show water consumed.</string>
+    <string name="zone_details_area_optional">(optional)</string>
+    <string name="zone_details_total_flow_optional">(optional, used instead of area for drip irrigation)</string>
+    <string name="zone_details_advanced_invalid_values">Invalid values</string>
+    <string name="zone_details_success_delete_image">Successfully deleted zone image</string>
+
+    <!-- Watering duration -->
+    <string name="watering_duration_active_zones">Active Zones</string>
+    <string name="watering_duration_inactive_zones">Inactive Zones</string>
+
+    <!-- General strings used in multiple places -->
+    <string name="all_success_update">Successfully updated %1$s to the latest version</string>
+    <string name="all_error_update">Error updating %1$s to the latest version</string>
+    <string name="all_device_update">%1$s Update</string>
+    <string name="all_rebooting">Rebooting %1$s…</string>
+    <string name="all_daily_water_need">Daily Water Need</string>
+    <string name="all_rain_amount">Rain Amount</string>
+    <string name="all_percent">%</string>
+    <string name="all_temperature_unit_celsius">\u00B0C</string>
+    <string name="all_temperature_unit_fahrenheit">\u00B0F</string>
+    <string name="all_update_now">Update Now</string>
+    <string name="all_today">Today</string>
+    <string name="all_app_name">RainMachine</string>
+    <string name="all_session_expired">Session expired</string>
+    <string name="all_ok">OK</string>
+    <string name="all_retry">Retry</string>
+    <string name="all_devices">Devices</string>
+    <string name="all_direct_access">Direct Access</string>
+    <string name="all_info">Info</string>
+    <string name="all_about">About</string>
+    <string name="all_software_update">Software Update</string>
+    <string name="all_restrictions">Restrictions</string>
+    <string name="all_success_send_confirmation_email">Successfully sent confirmation email</string>
+    <string name="all_failure_send_confirmation_email">Failure sending confirmation email</string>
+    <string name="all_refresh">Refresh</string>
+    <string name="all_zone_default_name">Zone %1$d</string>
+    <string name="all_delete">Delete</string>
+    <string name="all_bulk_edit">Bulk Edit</string>
+    <string name="all_start">Start</string>
+    <string name="all_cancel">Cancel</string>
+    <string name="all_error_rain_machine">Device error : %1$s</string>
+    <string name="all_error_generic">Connection to the device was lost.</string>
+    <string name="all_password">Password</string>
+    <string name="all_never">Never</string>
+    <string name="all_save">Save</string>
+    <string name="all_error_invalid">Invalid</string>
+    <string name="all_error_required">Required</string>
+    <string name="all_error_fill_in">Please fill in the fields correctly</string>
+    <string name="all_weekdays">Selected days</string>
+    <string name="all_snooze">Snooze</string>
+    <string name="all_device_settings">System Settings</string>
+    <string name="all_watering_history">Watering History</string>
+    <string name="all_dashboard_graphs">Dashboard Graphs</string>
+    <string name="all_years_lc">years</string>
+    <string name="all_year_lc">year</string>
+    <string name="all_months_lc">months</string>
+    <string name="all_month_lc">month</string>
+    <string name="all_weeks_lc">weeks</string>
+    <string name="all_week_lc">week</string>
+    <string name="all_days">days</string>
+    <string name="all_day">day</string>
+    <string name="all_hours">hours</string>
+    <string name="all_hour">hour</string>
+    <string name="all_minutes">minutes</string>
+    <string name="all_seconds">seconds</string>
+    <string name="all_second">second</string>
+    <string name="all_minute">minute</string>
+    <string name="all_done">Done</string>
+    <string name="all_frequency">Frequency</string>
+    <string name="all_every_day">Every Day</string>
+    <string name="all_unsaved_changes_zone">There are unsaved changes to this zone. Are you sure you want to leave the screen?</string>
+    <string name="all_yes">Yes</string>
+    <string name="all_no">No</string>
+    <string name="all_unsaved_changes">Unsaved Changes</string>
+    <string name="all_wizard">Wizard</string>
+    <string name="all_us_ca">CA, US</string>
+    <string name="all_us_fl">FL, US</string>
+    <string name="all_add_weather_service">Add Weather Service</string>
+    <string name="all_weather_sensitivity">Weather Sensitivity</string>
+    <string name="all_last_run">Last run: %1$s</string>
+    <string name="all_north_america">North America</string>
+    <string name="all_global">global</string>
+    <string name="all_cover_area">Cover area: %1$s</string>
+    <string name="all_disabled">Disabled</string>
+    <string name="all_enabled">Enabled</string>
+    <string name="all_discard">Discard</string>
+    <string name="all_old_password">Old password</string>
+    <string name="all_new_password">New password</string>
+    <string name="all_confirm_password">Confirm password</string>
+    <string name="all_error_password_mismatch">Password mismatch</string>
+    <string name="all_network_settings">Network Settings</string>
+    <string name="all_show_password">Show password</string>
+    <string name="all_are_you_sure">Are you sure?</string>
+    <string name="all_january">January</string>
+    <string name="all_february">February</string>
+    <string name="all_march">March</string>
+    <string name="all_april">April</string>
+    <string name="all_may">May</string>
+    <string name="all_june">June</string>
+    <string name="all_july">July</string>
+    <string name="all_august">August</string>
+    <string name="all_september">September</string>
+    <string name="all_october">October</string>
+    <string name="all_november">November</string>
+    <string name="all_december">December</string>
+    <string name="all_every_day_restriction">Every day</string>
+    <string name="all_freeze_protect">Freeze Protect</string>
+    <string name="all_months">Months</string>
+    <string name="all_hours_title">Hours</string>
+    <string name="all_device_name">Device Name</string>
+    <string name="all_failed_connect_ap">Failed to connect to the device %1$s</string>
+    <string name="all_set_remote_access">Remote access</string>
+    <string name="all_pending">Pending</string>
+    <string name="all_not_set">Not set</string>
+    <string name="all_enable_cloud_info">For your own security, a verification email has been sent to %1$s. Please check your email inbox and click the validation link. You may also want to check your spam folder, just in case.</string>
+    <string name="all_rain_sensor">Rain Sensor</string>
+    <string name="all_skip">Skip</string>
+    <string name="all_remote_access">Remote Access</string>
+    <string name="all_rain_sensitivity">Rain Sensitivity</string>
+    <string name="all_wind_sensitivity">Wind Sensitivity</string>
+    <string name="all">None</string>
+    <string name="all_defaults">Defaults</string>
+    <string name="all_off">OFF</string>
+    <string name="all_on">ON</string>
+    <string name="all_before">before</string>
+    <string name="all_after">after</string>
+    <string name="all_sunrise">sunrise</string>
+    <string name="all_sunset">sunset</string>
+    <string name="all_mm">mm</string>
+    <string name="all_inch">in</string>
+    <string name="all_m3">m&#179;</string>
+    <string name="all_gal">gal</string>
+    <string name="all_advanced_settings">Advanced Settings</string>
+    <string name="all_restore_backup">Restore from Backup</string>
+    <string name="all_temperature_max_min">Temperature Max, Min</string>
+    <string name="all_weather">Weather</string>
+    <string name="all_mm_h">mm/h</string>
+    <string name="all_inch_h">in/h</string>
+    <string name="all_percentage">%d %%</string>
+    <string name="all_edit">Edit</string>
+    <string name="all_error_min_max">Must be at least %1$d and at most %2$d</string>
+    <string name="all_custom">Custom</string>
+    <string name="all_at">at</string>
+    <string name="all_notifications">Notifications</string>
+    <string name="all_help">Help</string>
+    <string name="all_save_logs_error">Can\\\'t save logs for some unknown reason</string>
+    <string name="all_rainmachine_authentication">RainMachine Authentication</string>
+    <string name="all_set_password">Please set up your RainMachine password. It is required to access your device locally or remotely.</string>
+    <string name="all_inactive">Inactive</string>
+    <string name="all_other">Other</string>
+    <string name="all_invalid_url">Invalid URL</string>
+    <string name="all_colon">:</string>
+    <string name="all_manual_watering_duration">Manual Watering Duration</string>
+    <string name="all_interface_options">Interface Options</string>
+    <string name="programs_copy">Copy of %1$s</string>
+    <plurals name="all_x_minutes">
+        <item quantity="one">1 min</item>
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <string-array name="all_week_days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+</resources>

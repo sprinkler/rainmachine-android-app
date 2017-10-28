@@ -1,0 +1,42 @@
+if (spk is AP) {
+    spk_is_AP_logic
+} else {
+    call api/apiVer
+    if (spi is SPK2 or SPK3) {
+        spk2_spk3_normal_logic
+    } else {
+        spk1_normal_logic
+    }
+}
+
+spk_is_AP_logic:
+    move to the AP
+    call api/apiVer
+    call api/diag
+
+    if (wizard has run) {
+        if (spk_is_really_authenticated) {
+            if (spk_uses_default_password) {
+                // the user pressed the hardware black button
+                go to wifi screen and then go to setting spk password screen
+            } else {
+                go to main screen
+            }
+        } else {
+            go to login screen
+        }
+    } else {
+        if (spk_is_really_authenticated) {
+            if (spk_standalone_mode) {
+		        if (spk_uses_default_password) {
+		            go to wizard screen without WiFi flow
+		        } else {
+		            go to wizard screen without WiFi flow but also show input for old password
+		        }
+            } else {
+		        go to WiFi screen
+            }
+        } else {
+	        go to physical touch screen
+        }
+    }

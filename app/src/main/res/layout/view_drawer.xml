@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rainmachine.presentation.screens.drawer.DrawerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/size_drawer"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/bg_drawer"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/spacing_large"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium"
+            android:paddingTop="@dimen/spacing_medium">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_medium">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all_app_name"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_larger" />
+
+                <TextView
+                    android:id="@+id/tv_cloud_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all_devices"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_separator"
+            android:src="@drawable/separator_gray" />-->
+
+        <LinearLayout
+            android:id="@+id/devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/size_drawer_item"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/spacing_medium"
+                android:src="@drawable/ic_action_list_2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/drawer_view_all_devices"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_larger" />
+        </LinearLayout>
+
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_separator"
+            android:src="@drawable/separator_gray" />-->
+
+        <LinearLayout
+            android:id="@+id/cloud_accounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/size_drawer_item"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/spacing_medium"
+                android:src="@drawable/ic_action_cloud" />
+
+            <TextView
+                android:id="@+id/cloud_account_action"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/all_remote_access"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_larger" />
+        </LinearLayout>
+
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_separator"
+            android:src="@drawable/separator_gray" />-->
+
+        <LinearLayout
+            android:id="@+id/other_devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/size_drawer_item"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/spacing_medium"
+                android:src="@drawable/ic_action_portforwarding" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/all_network_settings"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_larger" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|bottom"
+            android:paddingBottom="@dimen/spacing_large"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_large"
+            tools:text="v4.1.1" />
+    </LinearLayout>
+</com.rainmachine.presentation.screens.drawer.DrawerView>
